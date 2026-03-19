@@ -4,7 +4,7 @@
 
 </div>
 
-A TUI library for C++ heavily inspired by
+A simple TUI library for C++ heavily inspired by
 [rich](https://github.com/textualize/rich) and
 [Spectre.Console](https://github.com/spectreconsole/spectre.console)
 

@@ -1,0 +1,10 @@
+build/
+.cache/
+out/
+
+CMakeUserPresets.json
+
+.vscode/
+.idea/
+
+.DS_Store
