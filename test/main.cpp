@@ -1,13 +1,12 @@
-#include "tuipp/console/print.hpp"
+#include "tuipp/print.hpp"
 
 int
 main()
 {
-    tuipp::console::println("Hello, World!");
+    tuipp::println("[red bold]Hello,[/] [green]World![/]");
+    tuipp::println("[green bold]Hello,[/] [cyan]World![/]");
 
-    tuipp::console::print("Hello, World!");
-
-    tuipp::console::println();
+    tuipp::println("\\[bold]Hello, World!\\[/]");
 
     return 0;
 }

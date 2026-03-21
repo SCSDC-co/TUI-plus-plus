@@ -11,10 +11,11 @@ project(
     LANGUAGES CXX
     VERSION 0.0.1
     DESCRIPTION
-        "A simple TUI library heavily inspired by rich and Spectre.Console"
+        "A header-only simple TUI library heavily \
+        inspired by rich and Spectre.Console"
 )
 
-add_subdirectory(src/tuipp/)
+add_subdirectory(include/tuipp/)
 
 option(TUI_BUILD_TESTS "Build tests" OFF)
 

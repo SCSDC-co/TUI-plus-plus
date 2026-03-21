@@ -3,19 +3,144 @@
 \doxymbox{\hyperlink{print_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacetuipp}{tuipp}}\ \{}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}}
-\DoxyCodeLine{00021\ \doxymbox{\hyperlink{namespacetuipp_a9ee62c561a4b5505a9a1528b66e223ad}{println}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{string}\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <sstream>}}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}}
-\DoxyCodeLine{00029\ \doxymbox{\hyperlink{namespacetuipp_a0142e1c370144a4b09c7110ad565ab1d}{print}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{string}\ =\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \}\ \textcolor{comment}{//\ namespace\ tuipp}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}vendor/termcolor.hpp"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacetuipp}{tuipp}}\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1ac}{State}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1aca61a96ffcb251bb9bf0abf8fec19d0ea8}{TEXT}},}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1acae444f73956e5b2a401eb9471db89e7c9}{TAG}}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ CharT>}
+\DoxyCodeLine{00034\ std::basic\_ostream<CharT>\&}
+\DoxyCodeLine{00035\ \doxymbox{\hyperlink{namespacetuipp_adaa3430d5434a2b4f93acff7ee778aa8}{handle\_styles}}(std::basic\_ostream<CharT>\&\ stream,\ \textcolor{keyword}{const}\ std::string\&\ buffer)}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ std::istringstream\ iss(buffer);}
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{while}\ (iss\ >>\ token)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}red"{}})\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::red;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}green"{}})\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::green;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}grey"{}})\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::grey;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}blue"{}})\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::blue;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}magenta"{}})\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::magenta;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}yellow"{}})\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::yellow;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}cyan"{}})\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::cyan;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}white"{}})\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::white;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_red"{}})\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_red;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_green"{}})\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_green;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_grey"{}})\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_grey;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_blue"{}})\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_blue;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_magenta"{}})\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_magenta;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_yellow"{}})\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_yellow;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_cyan"{}})\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_cyan;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bg\_white"{}})\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::on\_white;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_red"{}})\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_red;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_green"{}})\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_green;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_grey"{}})\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_grey;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_blue"{}})\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_blue;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_magenta"{}})\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_magenta;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_yellow"{}})\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_yellow;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_cyan"{}})\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_cyan;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bright\_white"{}})\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bright\_white;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}bold"{}})\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::bold;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}underline"{}})\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::underline;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}blink"{}})\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::blink;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}italic"{}})\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::italic;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (token\ ==\ \textcolor{stringliteral}{"{}/"{}})\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ termcolor::reset;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{return}\ stream;}
+\DoxyCodeLine{00103\ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ CharT>}
+\DoxyCodeLine{00106\ std::basic\_ostream<CharT>\&}
+\DoxyCodeLine{00107\ \doxymbox{\hyperlink{namespacetuipp_a6c4e1b58742525b37ac016a84fcdeaa7}{parse\_string}}(std::basic\_ostream<CharT>\&\ stream,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{string})}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1ac}{State}}\ state\ =\ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1aca61a96ffcb251bb9bf0abf8fec19d0ea8}{State::TEXT}};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ std::string\ buffer;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{char}\ prev\_char\{\};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\&\ c\ :\ \textcolor{keywordtype}{string})\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (state)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1aca61a96ffcb251bb9bf0abf8fec19d0ea8}{State::TEXT}}:\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'['}\ \&\&\ prev\_char\ !=\ \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1acae444f73956e5b2a401eb9471db89e7c9}{State::TAG}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buffer.clear();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ c;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1acae444f73956e5b2a401eb9471db89e7c9}{State::TAG}}:\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{']'})\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ \doxymbox{\hyperlink{namespacetuipp_af7b94df62e4447931e6f6f06aeb0e1aca61a96ffcb251bb9bf0abf8fec19d0ea8}{State::TEXT}};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacetuipp_adaa3430d5434a2b4f93acff7ee778aa8}{handle\_styles}}(stream,\ buffer.erase(0,\ 1));}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buffer\ +=\ c;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ prev\_char\ =\ c;}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{return}\ stream;}
+\DoxyCodeLine{00140\ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00154\ \doxymbox{\hyperlink{namespacetuipp_a9ee62c561a4b5505a9a1528b66e223ad}{println}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{string}\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00155\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \doxymbox{\hyperlink{namespacetuipp_a6c4e1b58742525b37ac016a84fcdeaa7}{parse\_string}}(std::cout,\ \textcolor{keywordtype}{string})\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00171\ \doxymbox{\hyperlink{namespacetuipp_a0142e1c370144a4b09c7110ad565ab1d}{print}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{string}\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00172\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \doxymbox{\hyperlink{namespacetuipp_a6c4e1b58742525b37ac016a84fcdeaa7}{parse\_string}}(std::cout,\ \textcolor{keywordtype}{string});}
+\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \}\ \textcolor{comment}{//\ namespace\ tuipp}}
 
 \end{DoxyCode}

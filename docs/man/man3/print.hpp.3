@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-include/tuipp/print.hpp \- A utility for printing output to the screen\&.  
+include/tuipp/print.hpp \- A utility to print text with markup support\&.  
 
 .SH SYNOPSIS
 .br
@@ -14,9 +14,22 @@ include/tuipp/print.hpp \- A utility for printing output to the screen\&.
 .RI "namespace \fBtuipp\fP"
 .br
 .in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBtuipp::State\fP { \fBtuipp::TEXT\fP, \fBtuipp::TAG\fP }"
+.br
+.in -1c
 .SS "Functions"
 
 .in +1c
+.ti -1c
+.RI "template<typename CharT> std::basic_ostream< CharT > & \fBtuipp::handle_styles\fP (std::basic_ostream< CharT > &stream, const std::string &buffer)"
+.br
+.ti -1c
+.RI "template<typename CharT> std::basic_ostream< CharT > & \fBtuipp::parse_string\fP (std::basic_ostream< CharT > &stream, const std::string &string)"
+.br
 .ti -1c
 .RI "void \fBtuipp::println\fP (const std::string &string='')"
 .br
@@ -28,8 +41,18 @@ include/tuipp/print.hpp \- A utility for printing output to the screen\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-A utility for printing output to the screen\&. 
+A utility to print text with markup support\&. 
 
+Example:
+
+.PP
+.PP
+.nf
+tuipp::println("[bold red]Hello, World![/]");
+
+tuipp::print("[bold green]Hello, World![/]");
+.fi
+.PP
 
 .PP
 \fBAuthor\fP
