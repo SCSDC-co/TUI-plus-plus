@@ -21,7 +21,7 @@ option(TUI_BUILD_TESTS "Build tests" OFF)
 if(TUI_BUILD_TESTS)
     add_executable(tuipp test/main.cpp)
 
+    target_include_directories(tuipp PUBLIC ${CMAKE_SOURCE_DIR}/include)
     target_link_libraries(tuipp PUBLIC tuipp_console)
     set_target_properties(tuipp PROPERTIES CXX_EXTENSIONS OFF)
-    target_compile_features(tuipp PUBLIC cxx_std_20)
 endif()

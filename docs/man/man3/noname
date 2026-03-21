@@ -1,0 +1,11 @@
+.TH "" 3 "TUI++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+console print\&.hpp 
+.PP
+include tuipp console print\&.hpp 
+.PP
+tuipp console print\&.hpp 
+.PP
+

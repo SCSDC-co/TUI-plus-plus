@@ -1,4 +1,4 @@
-import tuipp.console;
+#include "tuipp/console/print.hpp"
 
 int
 main()
