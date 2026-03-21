@@ -6,57 +6,52 @@ tuipp
 .SH SYNOPSIS
 .br
 .PP
-.SS "Enumerations"
-
-.in +1c
-.ti -1c
-.RI "enum class \fBState\fP { \fBTEXT\fP, \fBTAG\fP }"
-.br
-.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "template<typename CharT> std::basic_ostream< CharT > & \fBhandle_styles\fP (std::basic_ostream< CharT > &stream, const std::string &buffer)"
-.br
-.ti -1c
-.RI "template<typename CharT> std::basic_ostream< CharT > & \fBparse_string\fP (std::basic_ostream< CharT > &stream, const std::string &string)"
-.br
-.ti -1c
 .RI "void \fBprintln\fP (const std::string &string='')"
 .br
-.RI "Print a string with a new line at the end\&. "
+.RI "Print a string with a new line at the end (supports markup)\&. "
 .ti -1c
 .RI "void \fBprint\fP (const std::string &string='')"
 .br
-.RI "Print a string without a new line at the end\&. "
+.RI "Print a string without a new line at the end (supports markup)\&. "
 .in -1c
-.SH "Enumeration Type Documentation"
-.PP 
-.SS "enum class \fBtuipp::State\fP\fR [strong]\fP"
-
-.PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\f(BITEXT \fP
-.TP
-\f(BITAG \fP
 .SH "Function Documentation"
 .PP 
-.SS "template<typename CharT> std::basic_ostream< CharT > & tuipp::handle_styles (std::basic_ostream< CharT > & stream, const std::string & buffer)"
-
-.SS "template<typename CharT> std::basic_ostream< CharT > & tuipp::parse_string (std::basic_ostream< CharT > & stream, const std::string & string)"
-
-.SS "void tuipp::print (const std::string & string = \fR''\fP)\fR [inline]\fP"
+.SS "void tuipp::print (const std::string & string = \fR''\fP)"
 
 .PP
-Print a string without a new line at the end\&. Example:
+Print a string without a new line at the end (supports markup)\&. 
+.SS "Example:"
+.PP
+.nf
+tuipp::print("[bold green]Hello, World![/]");
+.fi
+.PP
+.SS "Styles:"
+Foreground colors: \fRred\fP, \fRgreen\fP, \fRgrey\fP, \fRblue\fP, \fRmagenta\fP, \fRyellow\fP, \fRwhite\fP, \fRbright_red\fP, \fRbright_green\fP, \fRbright_grey\fP, \fRbright_blue\fP, \fRbright_magenta\fP, \fRbright_yellow\fP, \fRbright_cyan\fP, \fRbright_white\fP
+
+.PP
+Background colors: \fRbg_red\fP, \fRbg_green\fP, \fRbg_grey\fP, \fRbg_blue\fP, \fRbg_magenta\fP, \fRbg_yellow\fP, \fRbg_cyan\fP, \fRbg_white\fP
+
+.PP
+Effects: \fRbold\fP, \fRunderline\fP, \fRblink\fP, \fRitalic\fP
+
+.PP
+Reset: \fR/\fP
+
+.PP
+.PP
+
+.PP
+You can also escape markup brackets using a backslash:
 
 .PP
 .PP
 .nf
-tuipp::print("[bold green]Hello, World![/]");
+tuipp::println("\\[bold red]Hello, World!\\[/]");
 .fi
 .PP
 
@@ -67,15 +62,38 @@ tuipp::print("[bold green]Hello, World![/]");
 .RE
 .PP
 
-.SS "void tuipp::println (const std::string & string = \fR''\fP)\fR [inline]\fP"
+.SS "void tuipp::println (const std::string & string = \fR''\fP)"
 
 .PP
-Print a string with a new line at the end\&. Example:
+Print a string with a new line at the end (supports markup)\&. 
+.SS "Example:"
+.PP
+.nf
+tuipp::println("[bold red]Hello, World![/]");
+.fi
+.PP
+.SS "Styles:"
+Foreground colors: \fRred\fP, \fRgreen\fP, \fRgrey\fP, \fRblue\fP, \fRmagenta\fP, \fRyellow\fP, \fRwhite\fP, \fRbright_red\fP, \fRbright_green\fP, \fRbright_grey\fP, \fRbright_blue\fP, \fRbright_magenta\fP, \fRbright_yellow\fP, \fRbright_cyan\fP, \fRbright_white\fP
+
+.PP
+Background colors: \fRbg_red\fP, \fRbg_green\fP, \fRbg_grey\fP, \fRbg_blue\fP, \fRbg_magenta\fP, \fRbg_yellow\fP, \fRbg_cyan\fP, \fRbg_white\fP
+
+.PP
+Effects: \fRbold\fP, \fRunderline\fP, \fRblink\fP, \fRitalic\fP
+
+.PP
+Reset: \fR/\fP
+
+.PP
+.PP
+
+.PP
+You can also escape markup brackets using a backslash:
 
 .PP
 .PP
 .nf
-tuipp::println("[bold red]Hello, World![/]");
+tuipp::println("\\[bold red]Hello, World!\\[/]");
 .fi
 .PP
 

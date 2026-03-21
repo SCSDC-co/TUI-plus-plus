@@ -1,11 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "hpst",
+  0: "epst",
   1: "t",
   2: "p",
-  3: "hp",
-  4: "s",
-  5: "t"
+  3: "p",
+  4: "es"
 };
 
 var indexSectionNames =
@@ -14,8 +13,7 @@ var indexSectionNames =
   1: "namespaces",
   2: "files",
   3: "functions",
-  4: "enums",
-  5: "enumvalues"
+  4: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +22,6 @@ var indexSectionLabels =
   1: "Namespaces",
   2: "Files",
   3: "Functions",
-  4: "Enumerations",
-  5: "Enumerator"
+  4: "Pages"
 };
 

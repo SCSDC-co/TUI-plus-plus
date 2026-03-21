@@ -14,30 +14,17 @@ include/tuipp/print.hpp \- A utility to print text with markup support\&.
 .RI "namespace \fBtuipp\fP"
 .br
 .in -1c
-.SS "Enumerations"
-
-.in +1c
-.ti -1c
-.RI "enum class \fBtuipp::State\fP { \fBtuipp::TEXT\fP, \fBtuipp::TAG\fP }"
-.br
-.in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "template<typename CharT> std::basic_ostream< CharT > & \fBtuipp::handle_styles\fP (std::basic_ostream< CharT > &stream, const std::string &buffer)"
-.br
-.ti -1c
-.RI "template<typename CharT> std::basic_ostream< CharT > & \fBtuipp::parse_string\fP (std::basic_ostream< CharT > &stream, const std::string &string)"
-.br
-.ti -1c
 .RI "void \fBtuipp::println\fP (const std::string &string='')"
 .br
-.RI "Print a string with a new line at the end\&. "
+.RI "Print a string with a new line at the end (supports markup)\&. "
 .ti -1c
 .RI "void \fBtuipp::print\fP (const std::string &string='')"
 .br
-.RI "Print a string without a new line at the end\&. "
+.RI "Print a string without a new line at the end (supports markup)\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

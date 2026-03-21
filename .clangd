@@ -1,2 +1,9 @@
 CompileFlags:
-  Add: [-std=c++20]
+  Add:
+    - -std=c++20
+    - -Wno-unknown-warning-option
+    - -DLAB_PGTBL
+    - -DSOL_PGTBL
+  Remove:
+    - -m*
+    - -f*
