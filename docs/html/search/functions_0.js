@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['print_0',['print',['../namespacetuipp_1_1console.html#acd69ec432238408c010e6f98bd76ac38',1,'tuipp::console']]],
-  ['println_1',['println',['../namespacetuipp_1_1console.html#a73f8275dc009e06386c07482b87b8a31',1,'tuipp::console']]]
+  ['print_0',['print',['../namespacetuipp.html#a0142e1c370144a4b09c7110ad565ab1d',1,'tuipp']]],
+  ['println_1',['println',['../namespacetuipp.html#a9ee62c561a4b5505a9a1528b66e223ad',1,'tuipp']]]
 ];

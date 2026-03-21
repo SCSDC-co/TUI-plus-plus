@@ -2129,6 +2129,12 @@ details[open]>summary::before {
 	font-size: 80%;
 }
 
+
+#titlearea {
+  border-bottom: none;
+  background-color: #101826;
+  border-right: 1px solid #212F4B;
+}
 :root {
     scrollbar-width: thin;
     scrollbar-color: #2C3F65 #070B11;

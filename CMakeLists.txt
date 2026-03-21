@@ -14,7 +14,7 @@ project(
         "A simple TUI library heavily inspired by rich and Spectre.Console"
 )
 
-add_subdirectory(src/tuipp/console)
+add_subdirectory(src/tuipp/)
 
 option(TUI_BUILD_TESTS "Build tests" OFF)
 
