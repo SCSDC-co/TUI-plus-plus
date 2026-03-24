@@ -205,6 +205,8 @@ parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
     for (std::size_t i = 0; i < string.size(); ++i) {
         char c{ string[i] };
 
+        char next_char{ string[i + 1] };
+
         switch (state) {
             case State::TEXT: {
                 if (c == '[' && prev_char != '\\') {
@@ -213,7 +215,7 @@ parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
                     buffer.clear();
                 } else {
                     // this will print just '[' instead of '\['
-                    if (!(c == '\\' && i + 1 < string.size() && string[i + 1] == '[')) {
+                    if (!(c == '\\' && i + 1 < string.size() && next_char == '[')) {
                         stream << c;
                     }
                 }

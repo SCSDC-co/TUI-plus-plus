@@ -31,16 +31,16 @@ namespace tuipp {
  *
  * ## Styles:
  *
- * Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright_red`,
- * `bright_green`, `bright_grey`, `bright_blue`, `bright_magenta`, `bright_yellow`, `bright_cyan`,
- * `bright_white`
+ * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright_red`,
+ *   `bright_green`, `bright_grey`, `bright_blue`, `bright_magenta`, `bright_yellow`, `bright_cyan`,
+ *   `bright_white`
  *
- * Background colors: `bg_red`, `bg_green`, `bg_grey`, `bg_blue`, `bg_magenta`, `bg_yellow`,
- * `bg_cyan`, `bg_white`
+ * - Background colors: `bg_red`, `bg_green`, `bg_grey`, `bg_blue`, `bg_magenta`, `bg_yellow`,
+ *   `bg_cyan`, `bg_white`
  *
- * Effects: `bold`, `underline`, `blink`, `italic`
+ * - Effects: `bold`, `underline`, `blink`, `italic`
  *
- * Reset: `/`
+ * - Reset: `/`
  *
  * ---
  *
@@ -66,16 +66,16 @@ println(const std::string& string = "");
  *
  * ## Styles:
  *
- * Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright_red`,
- * `bright_green`, `bright_grey`, `bright_blue`, `bright_magenta`, `bright_yellow`, `bright_cyan`,
- * `bright_white`
+ * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright_red`,
+ *   `bright_green`, `bright_grey`, `bright_blue`, `bright_magenta`, `bright_yellow`, `bright_cyan`,
+ *   `bright_white`
  *
- * Background colors: `bg_red`, `bg_green`, `bg_grey`, `bg_blue`, `bg_magenta`, `bg_yellow`,
- * `bg_cyan`, `bg_white`
+ * - Background colors: `bg_red`, `bg_green`, `bg_grey`, `bg_blue`, `bg_magenta`, `bg_yellow`,
+ *   `bg_cyan`, `bg_white`
  *
- * Effects: `bold`, `underline`, `blink`, `italic`
+ * - Effects: `bold`, `underline`, `blink`, `italic`
  *
- * Reset: `/`
+ * - Reset: `/`
  *
  * ---
  *
