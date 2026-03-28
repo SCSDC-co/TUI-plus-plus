@@ -42,7 +42,8 @@ if(TUIPP_BUILD_DOCS)
         set(DOXYGEN_QUIET YES)
         set(DOXYGEN_RECURSIVE YES)
         set(DOXYGEN_GENERATE_MAN YES)
-        set(GENERATE_TREEVIEW YES)
+        set(DOXYGEN_GENERATE_TREEVIEW YES)
+        set(DOXYGEN_EXCLUDE_PATTERNS *private/*)
 
         doxygen_add_docs(tuipp_docs ${CMAKE_SOURCE_DIR}/include/tuipp/ ALL)
 

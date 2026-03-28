@@ -2,8 +2,8 @@
 .ad l
 .nh
 .SH NAME
-include tuipp print\&.hpp 
+include tuipp Console\&.hpp print\&.hpp 
 .PP
-tuipp print\&.hpp 
+tuipp Console\&.hpp print\&.hpp 
 .PP
 
