@@ -1,5 +1,13 @@
 # Doxyfile 1.16.1
 
+# ╭──────────────────────────────────────────────────────────╮
+# │ PLEASE USE CMAKE TO BUILD THE DOCS:                      │
+# │                                                          │
+# │ mkdir build                                              │
+# │ cd build                                                 │
+# │ cmake .. -DTUIPP_BUILD_DOCS=True && ninja                │
+# ╰──────────────────────────────────────────────────────────╯
+
 # This file describes the settings to be used by the documentation system
 # Doxygen (www.doxygen.org) for a project.
 #
@@ -911,7 +919,7 @@ EXTERNAL_TOOL_PATH     =
 # messages are off.
 # The default value is: NO.
 
-QUIET                  = NO
+QUIET                  = YES
 
 # The WARNINGS tag can be used to turn on/off the warning messages that are
 # generated to standard error (stderr) by Doxygen. If WARNINGS is set to YES

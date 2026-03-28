@@ -21,7 +21,7 @@
 namespace tuipp {
 
 /**
- * @brief Print a string with a new line at the end (supports markup).
+ * @brief Print a string with a new line at the end (supports markup). test
  *
  * ## Example:
  *
