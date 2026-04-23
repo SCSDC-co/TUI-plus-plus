@@ -1,4 +1,7 @@
+#include <iostream>
+
 #include "tuipp/Console.hpp"
+#include "tuipp/colors.hpp"
 #include "tuipp/print.hpp"
 
 int
@@ -15,9 +18,12 @@ main()
     tuipp::println("[green]This is green [bold]this is bold and green[reset] this is normal");
     tuipp::println("\\[bold]Hello, World!\\[reset]");
 
-    tuipp::println(console_size.width, "x", console_size.height);
+    tuipp::println("[green]Size: [/]", console_size.width, "x", console_size.height);
 
-    console << "[bold green]Hello, " << "World!" << "[reset], " << 10 << "." << '\n';
+    console << "[bold green]Hello, World![reset] " << 10 << "." << '\n';
+
+    std::cout << tuipp::colors::blue << "Hello, World! " << tuipp::colors::on_grey << "cool text!"
+              << tuipp::colors::reset << " normal text!" << std::endl;
 
     return 0;
 }

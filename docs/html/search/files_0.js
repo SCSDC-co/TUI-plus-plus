@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['console_2ehpp_0',['Console.hpp',['../Console_8hpp.html',1,'']]]
+  ['colors_2ehpp_0',['colors.hpp',['../colors_8hpp.html',1,'']]],
+  ['console_2ehpp_1',['Console.hpp',['../Console_8hpp.html',1,'']]]
 ];
