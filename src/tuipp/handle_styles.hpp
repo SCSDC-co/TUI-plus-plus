@@ -1,10 +1,9 @@
 #pragma once
 
-#include <sstream>
-#include <stdexcept>
+#include <cstdlib>
+#include <iostream>
 #include <string>
 #include <unordered_map>
-#include <vector>
 
 #include "vendor/termcolor.hpp"
 
@@ -41,7 +40,6 @@ enum class Style
     BLINK,
     ITALIC,
     RESET,
-    RESET_ALL,
 };
 
 inline const std::unordered_map<std::string, Style> token_to_style{
@@ -74,7 +72,6 @@ inline const std::unordered_map<std::string, Style> token_to_style{
     { "blink", Style::BLINK },
     { "italic", Style::ITALIC },
     { "/", Style::RESET },
-    { "reset", Style::RESET_ALL }
 };
 
 template<typename CharT>
@@ -166,6 +163,9 @@ apply_style(std::basic_ostream<CharT>& stream, const Style style)
         case Style::ITALIC:
             stream << termcolor::italic;
             break;
+        case Style::RESET:
+            stream << termcolor::reset;
+            break;
     }
 
     return stream;
@@ -173,48 +173,16 @@ apply_style(std::basic_ostream<CharT>& stream, const Style style)
 
 template<typename CharT>
 std::basic_ostream<CharT>&
-handle_styles(std::basic_ostream<CharT>& stream,
-              const std::string& buffer,
-              std::vector<Style>& styles)
+handle_styles(std::basic_ostream<CharT>& stream, const std::string& buffer)
 {
-    // this will take the individual words from buffer
-    std::istringstream iss(buffer);
-    std::string token{};
+    if (token_to_style.find(buffer) == token_to_style.end()) {
+        std::cerr << '\"' << buffer << '\"' << " is not a valid style!" << std::endl;
 
-    std::vector<Style> new_styles;
+        std::exit(1);
+    } else {
+        Style style = token_to_style.at(buffer);
 
-    while (iss >> token) {
-        if (token_to_style.find(token) == token_to_style.end()) {
-            throw std::invalid_argument("\"" + token + "\"" + " is not a valid style.");
-        } else {
-            Style style{ token_to_style.at(token) };
-
-            new_styles.push_back(style);
-        }
-    }
-
-    for (const Style style : new_styles) {
-        // instead of resetting all the styles we are just resetting the last one and then reapply
-        // the others
-        if (style == Style::RESET) {
-            if (!styles.empty()) {
-                styles.pop_back();
-            }
-
-            stream << termcolor::reset;
-
-            for (const Style s : styles) {
-                apply_style(stream, s);
-            }
-        } else if (style == Style::RESET_ALL) {
-            styles.clear();
-
-            stream << termcolor::reset;
-        } else {
-            apply_style(stream, style);
-
-            styles.push_back(style);
-        }
+        apply_style(stream, style);
     }
 
     return stream;
