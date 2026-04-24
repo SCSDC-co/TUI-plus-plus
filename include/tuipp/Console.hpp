@@ -32,6 +32,13 @@ class Console
         return *this;
     }
 
+    Console& operator<<(std::ostream& (*f)(std::ostream&))
+    {
+        std::cout << f;
+
+        return *this;
+    }
+
     TUIPP_NODISCARD TerminalSize get_terminal_size();
 
     Console()

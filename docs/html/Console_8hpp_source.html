@@ -125,24 +125,34 @@ $(function(){initNavTree('Console_8hpp_source.html','',''); });
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">   35</a></span>    TUIPP_NODISCARD <a class="code hl_struct" href="structtuipp_1_1Console_1_1TerminalSize.html">TerminalSize</a> <a class="code hl_function" href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">get_terminal_size</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">   37</a></span>    <a class="code hl_function" href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">Console</a>()</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      : terminal_size(<a class="code hl_function" href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">get_terminal_size</a>()) {};</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classtuipp_1_1Console.html#a3d4e63f8d4d199ddc1dcc0894685c8fe">   35</a></span>    <a class="code hl_function" href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">Console</a>&amp; <a class="code hl_function" href="classtuipp_1_1Console.html#a3d4e63f8d4d199ddc1dcc0894685c8fe">operator&lt;&lt;</a>(std::ostream&amp; (*f)(std::ostream&amp;))</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::cout &lt;&lt; f;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    TerminalSize terminal_size{};</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
-</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">   42</a></span>    TUIPP_NODISCARD <a class="code hl_struct" href="structtuipp_1_1Console_1_1TerminalSize.html">TerminalSize</a> <a class="code hl_function" href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">get_terminal_size</a>();</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace tuipp</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">   44</a></span>    <a class="code hl_function" href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">Console</a>()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      : terminal_size(<a class="code hl_function" href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">get_terminal_size</a>()) {};</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    TerminalSize terminal_size{};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace tuipp</span></div>
+<div class="ttc" id="aclasstuipp_1_1Console_html_a3d4e63f8d4d199ddc1dcc0894685c8fe"><div class="ttname"><a href="classtuipp_1_1Console.html#a3d4e63f8d4d199ddc1dcc0894685c8fe">tuipp::Console::operator&lt;&lt;</a></div><div class="ttdeci">Console &amp; operator&lt;&lt;(std::ostream &amp;(*f)(std::ostream &amp;))</div><div class="ttdef"><b>Definition</b> Console.hpp:35</div></div>
 <div class="ttc" id="aclasstuipp_1_1Console_html_ac026f757d12c438c51ee02f7cc763ed1"><div class="ttname"><a href="classtuipp_1_1Console.html#ac026f757d12c438c51ee02f7cc763ed1">tuipp::Console::operator&lt;&lt;</a></div><div class="ttdeci">Console &amp; operator&lt;&lt;(const T &amp;value)</div><div class="ttdef"><b>Definition</b> Console.hpp:28</div></div>
-<div class="ttc" id="aclasstuipp_1_1Console_html_ace11c336b83c77e9541c9734e6ee24b9"><div class="ttname"><a href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">tuipp::Console::Console</a></div><div class="ttdeci">Console()</div><div class="ttdef"><b>Definition</b> Console.hpp:37</div></div>
+<div class="ttc" id="aclasstuipp_1_1Console_html_ace11c336b83c77e9541c9734e6ee24b9"><div class="ttname"><a href="classtuipp_1_1Console.html#ace11c336b83c77e9541c9734e6ee24b9">tuipp::Console::Console</a></div><div class="ttdeci">Console()</div><div class="ttdef"><b>Definition</b> Console.hpp:44</div></div>
 <div class="ttc" id="aclasstuipp_1_1Console_html_af26cfdcf8467dc26db179c5c2ef75fd8"><div class="ttname"><a href="classtuipp_1_1Console.html#af26cfdcf8467dc26db179c5c2ef75fd8">tuipp::Console::get_terminal_size</a></div><div class="ttdeci">TUIPP_NODISCARD TerminalSize get_terminal_size()</div></div>
 <div class="ttc" id="anamespacetuipp_html"><div class="ttname"><a href="namespacetuipp.html">tuipp</a></div><div class="ttdef"><b>Definition</b> colors.hpp:13</div></div>
-<div class="ttc" id="anamespacetuipp_html_a795bf9ac1ac4736ba4f777aac3395d5e"><div class="ttname"><a href="namespacetuipp.html#a795bf9ac1ac4736ba4f777aac3395d5e">tuipp::print</a></div><div class="ttdeci">void print(const Args &amp;... content)</div><div class="ttdoc">Print an output to the screen without a new line at the end (supports markup).</div><div class="ttdef"><b>Definition</b> print.hpp:122</div></div>
+<div class="ttc" id="anamespacetuipp_html_a795bf9ac1ac4736ba4f777aac3395d5e"><div class="ttname"><a href="namespacetuipp.html#a795bf9ac1ac4736ba4f777aac3395d5e">tuipp::print</a></div><div class="ttdeci">void print(const Args &amp;... content)</div><div class="ttdoc">Print an output to the screen without a new line at the end (supports markup).</div><div class="ttdef"><b>Definition</b> print.hpp:142</div></div>
 <div class="ttc" id="aprint_8hpp_html"><div class="ttname"><a href="print_8hpp.html">print.hpp</a></div><div class="ttdoc">A utility to print text with markup support.</div></div>
 <div class="ttc" id="astructtuipp_1_1Console_1_1TerminalSize_html"><div class="ttname"><a href="structtuipp_1_1Console_1_1TerminalSize.html">tuipp::Console::TerminalSize</a></div><div class="ttdef"><b>Definition</b> Console.hpp:22</div></div>
 <div class="ttc" id="astructtuipp_1_1Console_1_1TerminalSize_html_a9b97a21147c5d89fa4a6f9952572624c"><div class="ttname"><a href="structtuipp_1_1Console_1_1TerminalSize.html#a9b97a21147c5d89fa4a6f9952572624c">tuipp::Console::TerminalSize::width</a></div><div class="ttdeci">std::size_t width</div><div class="ttdef"><b>Definition</b> Console.hpp:23</div></div>

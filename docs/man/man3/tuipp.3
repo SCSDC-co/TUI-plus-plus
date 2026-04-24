@@ -74,6 +74,21 @@ tuipp::print("\\[bold red]Hello, World!\\[/]");
 .PP
 
 .PP
+.PP
+
+.PP
+It can also print iterables:
+
+.PP
+.PP
+.nf
+std::vector<int> vector{ { 1, 2, 3, 4, 5, 6 } };
+
+tuipp::print(vector);
+.fi
+.PP
+
+.PP
 \fBParameters\fP
 .RS 4
 \fIcontent\fP The items you want to print, they can be of any type and you can pass as many as you want\&. 
@@ -116,6 +131,21 @@ You can also escape markup brackets using a backslash:
 .PP
 .nf
 tuipp::println("\\[bold red]Hello, World!\\[/]");
+.fi
+.PP
+
+.PP
+.PP
+
+.PP
+It can also print iterables:
+
+.PP
+.PP
+.nf
+std::vector<int> vector{ { 1, 2, 3, 4, 5, 6 } };
+
+tuipp::println(vector);
 .fi
 .PP
 

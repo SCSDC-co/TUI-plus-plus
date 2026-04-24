@@ -20,6 +20,9 @@ tuipp::Console
 .RI "template<typename T> \fBConsole\fP & \fBoperator<<\fP (const T &value)"
 .br
 .ti -1c
+.RI "\fBConsole\fP & \fBoperator<<\fP (std::ostream &(*f)(std::ostream &))"
+.br
+.ti -1c
 .RI "TUIPP_NODISCARD \fBTerminalSize\fP \fBget_terminal_size\fP ()"
 .br
 .ti -1c
@@ -35,6 +38,8 @@ tuipp::Console
 .SS "TUIPP_NODISCARD \fBTerminalSize\fP tuipp::Console::get_terminal_size ()"
 
 .SS "template<typename T> \fBConsole\fP & tuipp::Console::operator<< (const T & value)\fR [inline]\fP"
+
+.SS "\fBConsole\fP & tuipp::Console::operator<< (std::ostream &(* f )(std::ostream &))\fR [inline]\fP"
 
 
 .SH "Author"

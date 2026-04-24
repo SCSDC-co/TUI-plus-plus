@@ -6,8 +6,8 @@
  * @details Example:
  *
  * @code{.cpp}
- * tuipp::println("[bold red]Hello, World![reset]");
- * tuipp::print("[bold green]Hello, World![reset]");
+ * tuipp::println("[bold red]Hello, World![/]");
+ * tuipp::print("[bold green]Hello, World![/]");
  * @endcode
  *
  * @author Giuliano De Amicis

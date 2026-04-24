@@ -1,9 +1,10 @@
 CompileFlags:
   Add:
-    - -std=c++20
+    - -std=c++23
     - -Wno-unknown-warning-option
     - -DLAB_PGTBL
     - -DSOL_PGTBL
   Remove:
     - -m*
     - -f*
+    - -Wformat-extra-args

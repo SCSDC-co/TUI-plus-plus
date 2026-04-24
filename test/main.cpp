@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 #include <vector>
 
 #include "tuipp/Console.hpp"
@@ -9,6 +10,7 @@ int
 main()
 {
     tuipp::Console console{};
+    std::vector<int> vector{ { 1, 2, 3, 4, 5, 6 } };
 
     tuipp::Console::TerminalSize console_size = console.get_terminal_size();
 
@@ -22,11 +24,9 @@ main()
 
     tuipp::println("[green]Terminal size: [/]", console_size.width, "x", console_size.height);
 
-    std::vector<int> vector{ { 1, 2, 3, 4, 5, 6 } };
+    tuipp::println("[green]It prints iterables: [/]", vector);
 
-    tuipp::println(vector);
-
-    console << "[bold green]Console output![/] " << 10 << "." << '\n';
+    console << "[bold green]Console output![/]" << std::endl << 10 << "." << std::endl;
 
     std::cout << tuipp::colors::blue << "Blue text " << tuipp::colors::on_grey << "cool text"
               << tuipp::colors::reset << " normal text" << std::endl;
