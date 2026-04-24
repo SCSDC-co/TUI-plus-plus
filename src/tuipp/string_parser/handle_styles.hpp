@@ -44,6 +44,21 @@ enum class Style
     RESET,
 };
 
+struct Styles
+{
+    std::vector<Style> styles{};
+
+    template<typename CharT>
+    std::basic_ostream<CharT>& apply_styles(std::basic_ostream<CharT>& stream)
+    {
+        for (const Style style : styles) {
+            apply_style(stream, style);
+        }
+
+        return stream;
+    }
+};
+
 inline const std::unordered_map<std::string, Style> token_to_style{
     { "red", Style::RED },
     { "green", Style::GREEN },
@@ -168,9 +183,6 @@ apply_style(std::basic_ostream<CharT>& stream, const Style style)
         case Style::ITALIC:
             stream << termcolor::italic;
             break;
-        case Style::RESET:
-            stream << termcolor::reset;
-            break;
     }
 
     return stream;
@@ -178,13 +190,17 @@ apply_style(std::basic_ostream<CharT>& stream, const Style style)
 
 template<typename CharT>
 std::basic_ostream<CharT>&
-handle_styles(std::basic_ostream<CharT>& stream, const std::string& buffer)
+handle_styles(std::basic_ostream<CharT>& stream,
+              const std::string& buffer,
+              std::vector<Styles>& styles)
 {
     std::istringstream iss(buffer);
 
     std::string token{};
 
     std::vector<std::string> token_vec{};
+
+    std::vector<Style> style_vec{};
 
     while (iss >> token) {
         token_vec.push_back(token);
@@ -212,8 +228,24 @@ handle_styles(std::basic_ostream<CharT>& stream, const std::string& buffer)
         } else {
             Style style = token_to_style.at(buffer);
 
-            apply_style(stream, style);
+            if (style == Style::RESET) {
+                styles.pop_back();
+
+                stream << termcolor::reset;
+
+                for (int i = 0; i < styles.size(); ++i) {
+                    styles[i].apply_styles(stream);
+                }
+            } else {
+                style_vec.push_back(style);
+            }
         }
+    }
+
+    styles.emplace_back(style_vec);
+
+    for (int i = 0; i < styles.size(); ++i) {
+        styles[i].apply_styles(stream);
     }
 
     return stream;

@@ -4,8 +4,10 @@
 #include <iostream>
 #include <ostream>
 #include <string>
+#include <vector>
 
 #include "handle_styles.hpp"
+#include "vendor/termcolor.hpp"
 
 namespace tuipp {
 
@@ -14,6 +16,8 @@ std::basic_ostream<CharT>&
 parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
 {
     char prev_char{};
+
+    std::vector<Styles> styles{};
 
     for (std::size_t i = 0; i < string.size(); ++i) {
         char current_char{ string[i] };
@@ -33,7 +37,7 @@ parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
             // this removes the ']' at the end of the buffer
             buffer.pop_back();
 
-            handle_styles(stream, buffer);
+            handle_styles(stream, buffer, styles);
         } else {
             // it will print "\[" without this
             if (current_char == '\\' && next_char == '[') {
@@ -47,6 +51,8 @@ parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
 
         prev_char = current_char;
     }
+
+    stream << termcolor::reset;
 
     return stream;
 }
