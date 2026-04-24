@@ -29,26 +29,25 @@ namespace tuipp {
  * ## Examples:
  *
  * @code{.cpp}
- * tuipp::println("[bold green]Hello, World![reset]");
+ * tuipp::println("[bold green]Hello, World![/]");
  * tuipp::println(
- * "[green]This is green [bold]this is bold and green[/] this is still green[reset]"
+ * "[green]This is green [bold]this is bold and green[/] this is still green[/]"
  * );
- * tuipp::println("[blue]Number of files: [reset]", 10, ".");
+ * tuipp::println("[blue]Number of files: [/]", 10, ".");
  * tuipp::println("[green]This is green [bold]this is bold and green[reset] this is normal");
  * @endcode
  *
  * ## Styles:
  *
- * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright_red`,
- *   `bright_green`, `bright_grey`, `bright_blue`, `bright_magenta`, `bright_yellow`, `bright_cyan`,
- *   `bright_white`
- *
- * - Background colors: `bg_red`, `bg_green`, `bg_grey`, `bg_blue`, `bg_magenta`, `bg_yellow`,
- *   `bg_cyan`, `bg_white`
+ * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright red`,
+ *   `bright green`, `bright grey`, `bright blue`, `bright magenta`, `bright yellow`, `bright cyan`,
+ *   `bright white`
  *
  * - Effects: `bold`, `underline`, `blink`, `italic`
  *
- * - Reset: `/` (for one style), `reset` (for all the styles)
+ * - Reset: `/` (for one style)
+ *
+ * - For the background colors just type: `on <color>`
  *
  * ---
  *
@@ -87,23 +86,24 @@ println(const Args&... content)
  *
  * @code{.cpp}
  * tuipp::print("[bold green]Hello, World![/]");
- * tuipp::print("[green]This is green [bold]this is bold and green[/] this is still green[/]");
+ * tuipp::print(
+ * "[green]This is green [bold]this is bold and green[/] this is still green[/]"
+ * );
  * tuipp::print("[blue]Number of files: [/]", 10, ".");
  * tuipp::print("[green]This is green [bold]this is bold and green[reset] this is normal");
  * @endcode
  *
  * ## Styles:
  *
- * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright_red`,
- *   `bright_green`, `bright_grey`, `bright_blue`, `bright_magenta`, `bright_yellow`, `bright_cyan`,
- *   `bright_white`
- *
- * - Background colors: `bg_red`, `bg_green`, `bg_grey`, `bg_blue`, `bg_magenta`, `bg_yellow`,
- *   `bg_cyan`, `bg_white`
+ * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright red`,
+ *   `bright green`, `bright grey`, `bright blue`, `bright magenta`, `bright yellow`, `bright cyan`,
+ *   `bright white`
  *
  * - Effects: `bold`, `underline`, `blink`, `italic`
  *
- * - Reset: `/`, `reset`
+ * - Reset: `/` (for one style)
+ *
+ * - For the background colors just type: `on <color>`
  *
  * ---
  *

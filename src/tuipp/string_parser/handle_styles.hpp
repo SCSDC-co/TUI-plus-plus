@@ -37,11 +37,20 @@ enum class Style
     BRIGHT_YELLOW,
     BRIGHT_CYAN,
     BRIGHT_WHITE,
+    BG_BRIGHT_RED,
+    BG_BRIGHT_GREEN,
+    BG_BRIGHT_GREY,
+    BG_BRIGHT_BLUE,
+    BG_BRIGHT_MAGENTA,
+    BG_BRIGHT_YELLOW,
+    BG_BRIGHT_CYAN,
+    BG_BRIGHT_WHITE,
     BOLD,
     UNDERLINE,
     BLINK,
     ITALIC,
     RESET,
+    RESET_ALL
 };
 
 struct Styles
@@ -87,11 +96,21 @@ inline const std::unordered_map<std::string, Style> token_to_style{
     { "bright yellow", Style::BRIGHT_YELLOW },
     { "bright cyan", Style::BRIGHT_CYAN },
     { "bright white", Style::BRIGHT_WHITE },
+    { "on bright red", Style::BG_BRIGHT_RED },
+    { "on bright green", Style::BG_BRIGHT_GREEN },
+    { "on bright grey", Style::BG_BRIGHT_GREY },
+    { "on bright gray", Style::BG_BRIGHT_GREY },
+    { "on bright blue", Style::BG_BRIGHT_BLUE },
+    { "on bright magenta", Style::BG_BRIGHT_MAGENTA },
+    { "on bright yellow", Style::BG_BRIGHT_YELLOW },
+    { "on bright cyan", Style::BG_BRIGHT_CYAN },
+    { "on bright white", Style::BG_BRIGHT_WHITE },
     { "bold", Style::BOLD },
     { "underline", Style::UNDERLINE },
     { "blink", Style::BLINK },
     { "italic", Style::ITALIC },
     { "/", Style::RESET },
+    { "reset", Style::RESET_ALL }
 };
 
 template<typename CharT>
@@ -171,6 +190,30 @@ apply_style(std::basic_ostream<CharT>& stream, const Style style)
         case Style::BRIGHT_WHITE:
             stream << termcolor::bright_white;
             break;
+        case Style::BG_BRIGHT_RED:
+            stream << termcolor::on_bright_red;
+            break;
+        case Style::BG_BRIGHT_GREEN:
+            stream << termcolor::on_bright_green;
+            break;
+        case Style::BG_BRIGHT_GREY:
+            stream << termcolor::on_bright_grey;
+            break;
+        case Style::BG_BRIGHT_BLUE:
+            stream << termcolor::on_bright_blue;
+            break;
+        case Style::BG_BRIGHT_MAGENTA:
+            stream << termcolor::on_bright_magenta;
+            break;
+        case Style::BG_BRIGHT_YELLOW:
+            stream << termcolor::on_bright_yellow;
+            break;
+        case Style::BG_BRIGHT_CYAN:
+            stream << termcolor::on_bright_cyan;
+            break;
+        case Style::BG_BRIGHT_WHITE:
+            stream << termcolor::on_bright_white;
+            break;
         case Style::BOLD:
             stream << termcolor::bold;
             break;
@@ -210,9 +253,15 @@ handle_styles(std::basic_ostream<CharT>& stream,
         std::string buffer{ token_vec[i] };
 
         if (buffer == "on") {
-            buffer = buffer + ' ' + token_vec[i + 1];
+            if (token_vec[i + 1] == "bright") {
+                buffer = buffer + ' ' + token_vec[i + 1] + ' ' + token_vec[i + 2];
 
-            ++i;
+                i += 2;
+            } else {
+                buffer = buffer + ' ' + token_vec[i + 1];
+
+                ++i;
+            }
         } else if (buffer == "bright") {
             buffer = buffer + ' ' + token_vec[i + 1];
 
@@ -236,6 +285,10 @@ handle_styles(std::basic_ostream<CharT>& stream,
                 for (int i = 0; i < styles.size(); ++i) {
                     styles[i].apply_styles(stream);
                 }
+            } else if (style == Style::RESET_ALL) {
+                styles.clear();
+
+                stream << termcolor::reset;
             } else {
                 style_vec.push_back(style);
             }

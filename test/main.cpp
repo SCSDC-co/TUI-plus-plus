@@ -15,6 +15,7 @@ main()
     tuipp::println("[green]Green text[/]");
     tuipp::println("\\[green]Escaped markup\\[/]");
     tuipp::println("[green bold on gray]Gorgeous text![/] This is normal text!");
+    tuipp::println("[green]This is green [bold]this is bold and green[reset] this is normal");
 
     tuipp::println("[green]Green text [bold]green and bold text[/] still green[/]");
 
