@@ -2,8 +2,10 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 #include "vendor/termcolor.hpp"
 
@@ -46,27 +48,30 @@ inline const std::unordered_map<std::string, Style> token_to_style{
     { "red", Style::RED },
     { "green", Style::GREEN },
     { "grey", Style::GREY },
+    { "gray", Style::GREY },
     { "blue", Style::BLUE },
     { "magenta", Style::MAGENTA },
     { "yellow", Style::YELLOW },
     { "cyan", Style::CYAN },
     { "white", Style::WHITE },
-    { "bg_red", Style::BG_RED },
-    { "bg_green", Style::BG_GREEN },
-    { "bg_grey", Style::BG_GREY },
-    { "bg_blue", Style::BG_BLUE },
-    { "bg_magenta", Style::BG_MAGENTA },
-    { "bg_yellow", Style::BG_YELLOW },
-    { "bg_cyan", Style::BG_CYAN },
-    { "bg_white", Style::BG_WHITE },
-    { "bright_red", Style::BRIGHT_RED },
-    { "bright_green", Style::BRIGHT_GREEN },
-    { "bright_grey", Style::BRIGHT_GREY },
-    { "bright_blue", Style::BRIGHT_BLUE },
-    { "bright_magenta", Style::BRIGHT_MAGENTA },
-    { "bright_yellow", Style::BRIGHT_YELLOW },
-    { "bright_cyan", Style::BRIGHT_CYAN },
-    { "bright_white", Style::BRIGHT_WHITE },
+    { "on red", Style::BG_RED },
+    { "on green", Style::BG_GREEN },
+    { "on grey", Style::BG_GREY },
+    { "on gray", Style::BG_GREY },
+    { "on blue", Style::BG_BLUE },
+    { "on magenta", Style::BG_MAGENTA },
+    { "on yellow", Style::BG_YELLOW },
+    { "on cyan", Style::BG_CYAN },
+    { "on white", Style::BG_WHITE },
+    { "bright red", Style::BRIGHT_RED },
+    { "bright green", Style::BRIGHT_GREEN },
+    { "bright grey", Style::BRIGHT_GREY },
+    { "bright gray", Style::BRIGHT_GREY },
+    { "bright blue", Style::BRIGHT_BLUE },
+    { "bright magenta", Style::BRIGHT_MAGENTA },
+    { "bright yellow", Style::BRIGHT_YELLOW },
+    { "bright cyan", Style::BRIGHT_CYAN },
+    { "bright white", Style::BRIGHT_WHITE },
     { "bold", Style::BOLD },
     { "underline", Style::UNDERLINE },
     { "blink", Style::BLINK },
@@ -175,14 +180,40 @@ template<typename CharT>
 std::basic_ostream<CharT>&
 handle_styles(std::basic_ostream<CharT>& stream, const std::string& buffer)
 {
-    if (token_to_style.find(buffer) == token_to_style.end()) {
-        std::cerr << '\"' << buffer << '\"' << " is not a valid style!" << std::endl;
+    std::istringstream iss(buffer);
 
-        std::exit(1);
-    } else {
-        Style style = token_to_style.at(buffer);
+    std::string token{};
 
-        apply_style(stream, style);
+    std::vector<std::string> token_vec{};
+
+    while (iss >> token) {
+        token_vec.push_back(token);
+    }
+
+    for (int i = 0; i < token_vec.size(); ++i) {
+        std::string buffer{ token_vec[i] };
+
+        if (buffer == "on") {
+            buffer = buffer + ' ' + token_vec[i + 1];
+
+            ++i;
+        } else if (buffer == "bright") {
+            buffer = buffer + ' ' + token_vec[i + 1];
+
+            ++i;
+        }
+
+        if (token_to_style.find(buffer) == token_to_style.end()) {
+            std::cerr << '\n'
+                      << termcolor::reset << '\"' << buffer << '\"' << " is not a valid style!"
+                      << std::endl;
+
+            std::exit(1);
+        } else {
+            Style style = token_to_style.at(buffer);
+
+            apply_style(stream, style);
+        }
     }
 
     return stream;
