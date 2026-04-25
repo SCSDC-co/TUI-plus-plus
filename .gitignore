@@ -4,7 +4,10 @@ out/
 
 CMakeUserPresets.json
 
-.vscode/
+.vscode/*
 .idea/
 
 .DS_Store
+
+# they are useful ngl
+!.vscode/tasks.json
