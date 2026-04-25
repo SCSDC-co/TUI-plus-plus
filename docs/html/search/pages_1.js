@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['styles_3a_0',['Styles:',['../namespacetuipp.html#autotoc_md1',1,'Styles:'],['../namespacetuipp.html#autotoc_md5',1,'Styles:']]]
+  ['properties_0',['Properties',['../classtuipp_1_1Console.html#autotoc_md0',1,'']]]
 ];

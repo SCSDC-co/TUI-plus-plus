@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-tuipp::Console
+tuipp::Console \- This is the class that represent a console\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -38,16 +39,42 @@ tuipp::Console
 .ti -1c
 .RI "void \fBprint_info\fP (const bool &color) const"
 .br
+.RI "A utility to print the console info in a nice format\&. "
 .ti -1c
 .RI "\fBConsole\fP ()"
 .br
 .ti -1c
 .RI "template<typename T> \fBConsole\fP & \fBoperator<<\fP (const T &value)"
 .br
+.RI "A << operator overload made for printing things in the \fRstd::cout\fP style\&. "
 .ti -1c
 .RI "\fBConsole\fP & \fBoperator<<\fP (std::ostream &(*f)(std::ostream &))"
 .br
+.RI "A << operator overload made for printing stream manipulators like \fRstd::endl\fP\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+This is the class that represent a console\&. 
+
+
+.SS "Properties"
+.IP "\(bu" 2
+\fBTerminalSize\fP: a struct that represent the dimensions of the console (width and height)
+.IP "\(bu" 2
+\fBColorSystem\fP: an enum to represent the color system supported by the console
+.PP
+.SS "Examples"
+.PP
+.nf
+tuipp::Console console{}; // creates the console
+
+console << "[green]Print to the screen using[/] << [green]operator overload![/]" << std::endl;
+console << "you can" << "chain them!" << std::endl;
+
+console\&.print_info(true); // print the console properties in a nice format!
+.fi
+.PP
+ 
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBtuipp::Console::ColorSystem\fP"
@@ -57,10 +84,13 @@ tuipp::Console
 .in +1c
 .TP
 \f(BINO_COLORS \fP
+no color support, it disables every color 
 .TP
 \f(BIEIGHT_BIT \fP
+16 colors palette 
 .TP
 \f(BITRUE_COLOR \fP
+full 16 million color support 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "tuipp::Console::Console ()\fR [inline]\fP"
@@ -71,16 +101,29 @@ tuipp::Console
 
 .SS "TUIPP_NODISCARD std::string tuipp::Console::get_color_support_string () const"
 
+.PP
+\fBReturns\fP
+.RS 4
+the color support as a string 
+.RE
+.PP
+
 .SS "TUIPP_NODISCARD bool tuipp::Console::get_support_ansi () const"
 
 .SS "TUIPP_NODISCARD \fBTerminalSize\fP tuipp::Console::get_terminal_size () const"
 
 .SS "template<typename T> \fBConsole\fP & tuipp::Console::operator<< (const T & value)\fR [inline]\fP"
 
+.PP
+A << operator overload made for printing things in the \fRstd::cout\fP style\&. 
 .SS "\fBConsole\fP & tuipp::Console::operator<< (std::ostream &(* f )(std::ostream &))\fR [inline]\fP"
 
+.PP
+A << operator overload made for printing stream manipulators like \fRstd::endl\fP\&. 
 .SS "void tuipp::Console::print_info (const bool & color) const"
 
+.PP
+A utility to print the console info in a nice format\&. 
 
 .SH "Author"
 .PP 
