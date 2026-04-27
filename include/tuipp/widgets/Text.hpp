@@ -8,7 +8,7 @@ namespace tuipp {
 
 namespace widgets {
 
-class Text : tuipp::widgets::IRenderable
+class Text : public tuipp::widgets::IRenderable
 {
   public:
     Text(std::string content)
@@ -16,7 +16,7 @@ class Text : tuipp::widgets::IRenderable
     {
     }
 
-    virtual void render();
+    virtual void render() const;
 
   private:
     std::string content{};

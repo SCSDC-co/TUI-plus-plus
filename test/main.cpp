@@ -1,39 +1,30 @@
-#include <iostream>
-#include <ostream>
 #include <vector>
 
 #include "tuipp/Console.hpp"
-#include "tuipp/colors.hpp"
+#include "tuipp/widgets/MarkupText.hpp"
+#include "tuipp/widgets/Text.hpp"
 
 int
 main()
 {
-    tuipp::Console console{};
     std::vector<int> vector{ { 1, 2, 3, 4, 5, 6 } };
 
-    tuipp::console_info::TerminalSize console_size = console.terminal_size;
+    tuipp::widgets::Text text = tuipp::widgets::Text("Text widget!");
+    tuipp::widgets::MarkupText markup_text =
+      tuipp::widgets::MarkupText("[bold][green]Markup[/] [blue]text[/][red]![/][/]");
 
-    tuipp::Console::println("Hello, World!");
-    tuipp::Console::println("[green]Green text[/]");
-    tuipp::Console::println("\\[green]Escaped markup\\[/]");
-    tuipp::Console::println("[green bold on gray]Gorgeous text![/] This is normal text!");
-    tuipp::Console::println(
-      "[green]This is green [bold]this is bold and green[reset] this is normal");
-    tuipp::Console::println("[green]Green text [bold]green and bold text[/] still green[/]");
+    tuipp::Console::println("Print function:");
+    tuipp::Console::println("  [green on grey]Colors![/]");
+    tuipp::Console::println("  [underline bold]Styles![/]");
+    tuipp::Console::println("  Normal text!");
+    tuipp::Console::println("  \\[green]Escaped markup!\\[/]");
+    tuipp::Console::println("  [green]Can print anything: [/]", vector);
 
-    tuipp::Console::println("[green]It prints iterables: [/]", vector);
+    tuipp::Console::println();
 
-    console << "[bold green]Console output![/]" << std::endl << 10 << "." << std::endl;
-
-    tuipp::Console::print_info(true);
-
-    tuipp::Console::println("[dim]Dim text![/]");
-    tuipp::Console::println("[reverse]Reverse text![/]");
-    tuipp::Console::println("[conceal]Conceal text![/]");
-    tuipp::Console::println("[strikethrough]Strikethrough text![/]");
-
-    std::cout << tuipp::colors::blue << "Blue text " << tuipp::colors::on_grey << "cool text"
-              << tuipp::colors::reset << " normal text" << std::endl;
+    tuipp::Console::println("Widgets:");
+    tuipp::Console::println("  ", text);
+    tuipp::Console::println("  ", markup_text);
 
     return 0;
 }

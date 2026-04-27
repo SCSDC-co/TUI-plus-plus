@@ -7,7 +7,7 @@ namespace tuipp {
 namespace widgets {
 
 void
-Text::render()
+Text::render() const
 {
     std::cout << this->content;
 }

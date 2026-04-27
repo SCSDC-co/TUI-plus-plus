@@ -16,21 +16,6 @@ namespace widgets {
 
 namespace markup_text {
 
-struct Styles
-{
-    std::vector<tuipp::widgets::Style> styles{};
-
-    template<typename CharT>
-    std::basic_ostream<CharT>& apply_styles(std::basic_ostream<CharT>& stream)
-    {
-        for (const tuipp::widgets::Style style : styles) {
-            apply_style(stream, style);
-        }
-
-        return stream;
-    }
-};
-
 inline const std::unordered_map<std::string, tuipp::widgets::Style> token_to_style{
     { "red", tuipp::widgets::Style::RED },
     { "green", tuipp::widgets::Style::GREEN },
@@ -209,6 +194,21 @@ apply_style(std::basic_ostream<CharT>& stream, const tuipp::widgets::Style style
 
     return stream;
 }
+
+struct Styles
+{
+    std::vector<tuipp::widgets::Style> styles{};
+
+    template<typename CharT>
+    std::basic_ostream<CharT>& apply_styles(std::basic_ostream<CharT>& stream)
+    {
+        for (const tuipp::widgets::Style style : styles) {
+            apply_style(stream, style);
+        }
+
+        return stream;
+    }
+};
 
 template<typename CharT>
 std::basic_ostream<CharT>&

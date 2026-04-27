@@ -113,8 +113,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac026f757d12c438c51ee02f7cc763ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A &lt;&lt; operator overload made for printing things in the <span class="tt">std::cout</span> style.  <br /></td></tr>
 <tr class="memitem:a3d4e63f8d4d199ddc1dcc0894685c8fe" id="r_a3d4e63f8d4d199ddc1dcc0894685c8fe"><td class="memItemLeft"><a class="el" href="classtuipp_1_1Console.html">Console</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3d4e63f8d4d199ddc1dcc0894685c8fe">operator&lt;&lt;</a> (std::ostream &amp;(*f)(std::ostream &amp;))</td></tr>
 <tr class="memdesc:a3d4e63f8d4d199ddc1dcc0894685c8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A &lt;&lt; operator overload made for printing stream manipulators like <span class="tt">std::endl</span>.  <br /></td></tr>
-<tr class="memitem:ad0e6bf22a54866279fc9554f49208970" id="r_ad0e6bf22a54866279fc9554f49208970"><td class="memItemLeft"><a class="el" href="classtuipp_1_1Console.html">Console</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad0e6bf22a54866279fc9554f49208970">operator&lt;&lt;</a> (tuipp::widgets::IRenderable &amp;widget)</td></tr>
-<tr class="memdesc:ad0e6bf22a54866279fc9554f49208970"><td class="mdescLeft">&#160;</td><td class="mdescRight">A specialization for printing widgets.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -124,8 +122,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa854d1ad5dd6145c1686e3f2617740a0" id="r_aa854d1ad5dd6145c1686e3f2617740a0"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:aa854d1ad5dd6145c1686e3f2617740a0 template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa854d1ad5dd6145c1686e3f2617740a0">print</a> (const Args &amp;... content)</td></tr>
 <tr class="memdesc:aa854d1ad5dd6145c1686e3f2617740a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an output to the screen without a new line at the end (supports markup).  <br /></td></tr>
-<tr class="memitem:aff388a44610cabb3a235069ca718e11c" id="r_aff388a44610cabb3a235069ca718e11c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aff388a44610cabb3a235069ca718e11c">print</a> (widgets::IRenderable &amp;item)</td></tr>
-<tr class="memitem:a701ad4adeeca4515a9f40f4b1b4c96aa" id="r_a701ad4adeeca4515a9f40f4b1b4c96aa"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a701ad4adeeca4515a9f40f4b1b4c96aa">println</a> (widgets::IRenderable &amp;item)</td></tr>
 <tr class="memitem:ab1f6430e72bb4e4b41c396ebc867da61" id="r_ab1f6430e72bb4e4b41c396ebc867da61"><td class="memItemLeft">static TUIPP_NODISCARD std::string&#160;</td><td class="memItemRight"><a class="el" href="#ab1f6430e72bb4e4b41c396ebc867da61">get_color_support_string</a> ()</td></tr>
 <tr class="memitem:af8cc9ec4e52216d8fed6af5e849f5312" id="r_af8cc9ec4e52216d8fed6af5e849f5312"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af8cc9ec4e52216d8fed6af5e849f5312">print_info</a> (const bool &amp;color)</td></tr>
 <tr class="memdesc:af8cc9ec4e52216d8fed6af5e849f5312"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility to print the console info in a nice format.  <br /></td></tr>
@@ -152,8 +148,8 @@ Examples</h2>
 <div class="line"><a class="code hl_function" href="#af8cc9ec4e52216d8fed6af5e849f5312">tuipp::Console::print_info</a>(<span class="keyword">true</span>);</div>
 <div class="ttc" id="aclasstuipp_1_1Console_html"><div class="ttname"><a href="classtuipp_1_1Console.html">tuipp::Console</a></div><div class="ttdoc">This is the class that represent a console.</div><div class="ttdef"><b>Definition</b> Console.hpp:43</div></div>
 <div class="ttc" id="aclasstuipp_1_1Console_html_a1017c32f551adba0aba8b182dca0eec6"><div class="ttname"><a href="#a1017c32f551adba0aba8b182dca0eec6">tuipp::Console::println</a></div><div class="ttdeci">static void println(const Args &amp;... content)</div><div class="ttdoc">Print an output to the screen with a new line at the end (supports markup).</div><div class="ttdef"><b>Definition</b> Console.hpp:102</div></div>
-<div class="ttc" id="aclasstuipp_1_1Console_html_aa854d1ad5dd6145c1686e3f2617740a0"><div class="ttname"><a href="#aa854d1ad5dd6145c1686e3f2617740a0">tuipp::Console::print</a></div><div class="ttdeci">static void print(const Args &amp;... content)</div><div class="ttdoc">Print an output to the screen without a new line at the end (supports markup).</div><div class="ttdef"><b>Definition</b> Console.hpp:167</div></div>
-<div class="ttc" id="aclasstuipp_1_1Console_html_af8cc9ec4e52216d8fed6af5e849f5312"><div class="ttname"><a href="#af8cc9ec4e52216d8fed6af5e849f5312">tuipp::Console::print_info</a></div><div class="ttdeci">static void print_info(const bool &amp;color)</div><div class="ttdoc">A utility to print the console info in a nice format.</div><div class="ttdef"><b>Definition</b> Console.hpp:205</div></div>
+<div class="ttc" id="aclasstuipp_1_1Console_html_aa854d1ad5dd6145c1686e3f2617740a0"><div class="ttname"><a href="#aa854d1ad5dd6145c1686e3f2617740a0">tuipp::Console::print</a></div><div class="ttdeci">static void print(const Args &amp;... content)</div><div class="ttdoc">Print an output to the screen without a new line at the end (supports markup).</div><div class="ttdef"><b>Definition</b> Console.hpp:169</div></div>
+<div class="ttc" id="aclasstuipp_1_1Console_html_af8cc9ec4e52216d8fed6af5e849f5312"><div class="ttname"><a href="#af8cc9ec4e52216d8fed6af5e849f5312">tuipp::Console::print_info</a></div><div class="ttdeci">static void print_info(const bool &amp;color)</div><div class="ttdoc">A utility to print the console info in a nice format.</div><div class="ttdef"><b>Definition</b> Console.hpp:201</div></div>
 </div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ab1f6430e72bb4e4b41c396ebc867da61" name="ab1f6430e72bb4e4b41c396ebc867da61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1f6430e72bb4e4b41c396ebc867da61">&#9670;&#160;</a></span>get_color_support_string()</h2>
@@ -182,7 +178,7 @@ Examples</h2>
 </div>
 </div>
 <a id="ac026f757d12c438c51ee02f7cc763ed1" name="ac026f757d12c438c51ee02f7cc763ed1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac026f757d12c438c51ee02f7cc763ed1">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac026f757d12c438c51ee02f7cc763ed1">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +207,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="a3d4e63f8d4d199ddc1dcc0894685c8fe" name="a3d4e63f8d4d199ddc1dcc0894685c8fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d4e63f8d4d199ddc1dcc0894685c8fe">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4e63f8d4d199ddc1dcc0894685c8fe">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,35 +233,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ad0e6bf22a54866279fc9554f49208970" name="ad0e6bf22a54866279fc9554f49208970"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0e6bf22a54866279fc9554f49208970">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classtuipp_1_1Console.html">Console</a> &amp; tuipp::Console::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">tuipp::widgets::IRenderable &amp;</td>          <td class="paramname"><span class="paramname"><em>widget</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A specialization for printing widgets. </p>
-
-</div>
-</div>
 <a id="aa854d1ad5dd6145c1686e3f2617740a0" name="aa854d1ad5dd6145c1686e3f2617740a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa854d1ad5dd6145c1686e3f2617740a0">&#9670;&#160;</a></span>print() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa854d1ad5dd6145c1686e3f2617740a0">&#9670;&#160;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,31 +294,6 @@ red</span>, <span class="tt">bright green</span>, <span class="tt">bright grey</
 
 </div>
 </div>
-<a id="aff388a44610cabb3a235069ca718e11c" name="aff388a44610cabb3a235069ca718e11c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff388a44610cabb3a235069ca718e11c">&#9670;&#160;</a></span>print() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tuipp::Console::print </td>
-          <td>(</td>
-          <td class="paramtype">widgets::IRenderable &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af8cc9ec4e52216d8fed6af5e849f5312" name="af8cc9ec4e52216d8fed6af5e849f5312"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8cc9ec4e52216d8fed6af5e849f5312">&#9670;&#160;</a></span>print_info()</h2>
 
@@ -378,7 +322,7 @@ red</span>, <span class="tt">bright green</span>, <span class="tt">bright grey</
 </div>
 </div>
 <a id="a1017c32f551adba0aba8b182dca0eec6" name="a1017c32f551adba0aba8b182dca0eec6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1017c32f551adba0aba8b182dca0eec6">&#9670;&#160;</a></span>println() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1017c32f551adba0aba8b182dca0eec6">&#9670;&#160;</a></span>println()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,31 +379,6 @@ red</span>, <span class="tt">bright green</span>, <span class="tt">bright grey</
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a701ad4adeeca4515a9f40f4b1b4c96aa" name="a701ad4adeeca4515a9f40f4b1b4c96aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a701ad4adeeca4515a9f40f4b1b4c96aa">&#9670;&#160;</a></span>println() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tuipp::Console::println </td>
-          <td>(</td>
-          <td class="paramtype">widgets::IRenderable &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

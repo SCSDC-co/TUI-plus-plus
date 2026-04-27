@@ -107,10 +107,12 @@ class Console
 
         (
           [&]() {
-              if constexpr (std::is_convertible_v<decltype(content), std::string>) {
-                  tuipp::widgets::markup_text::parse_string(output, content);
+              if constexpr (std::is_base_of_v<widgets::IRenderable, std::remove_cvref_t<Args>>) {
+                  content.render();
+              } else if constexpr (std::is_convertible_v<decltype(content), std::string>) {
+                  tuipp::widgets::markup_text::parse_string(std::cout, content);
               } else {
-                  std::print("{}", content);
+                  std::print("{} ", content);
               }
           }(),
           ...);
@@ -172,21 +174,15 @@ class Console
     {
         (
           [&]() {
-              if constexpr (std::is_convertible_v<decltype(content), std::string>) {
+              if constexpr (std::is_base_of_v<widgets::IRenderable, std::remove_cvref_t<Args>>) {
+                  content.render();
+              } else if constexpr (std::is_convertible_v<decltype(content), std::string>) {
                   tuipp::widgets::markup_text::parse_string(std::cout, content);
               } else {
-                  std::print("{}", content);
+                  std::print("{} ", content);
               }
           }(),
           ...);
-    }
-
-    static void print(widgets::IRenderable& item) { item.render(); }
-    static void println(widgets::IRenderable& item)
-    {
-        item.render();
-
-        std::cout << std::endl;
     }
 
     /// @return the color support as a string
@@ -238,14 +234,6 @@ class Console
     )
     {
         std::cout << f;
-
-        return *this;
-    }
-
-    /// A specialization for printing widgets
-    Console& operator<<(tuipp::widgets::IRenderable& widget)
-    {
-        widget.render();
 
         return *this;
     }

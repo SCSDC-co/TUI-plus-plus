@@ -7,7 +7,7 @@ namespace tuipp {
 namespace widgets {
 
 void
-MarkupText::render()
+MarkupText::render() const
 {
     markup_text::parse_string(std::cout, this->content);
 }

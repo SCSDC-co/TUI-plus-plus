@@ -8,7 +8,7 @@ namespace tuipp {
 
 namespace widgets {
 
-class MarkupText : tuipp::widgets::IRenderable
+class MarkupText : public tuipp::widgets::IRenderable
 {
   public:
     MarkupText(std::string content)
@@ -16,7 +16,7 @@ class MarkupText : tuipp::widgets::IRenderable
     {
     }
 
-    virtual void render();
+    virtual void render() const;
 
   private:
     std::string content{};

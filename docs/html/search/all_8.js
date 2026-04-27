@@ -8,5 +8,5 @@ var searchData=
   ['on_5fred_5',['on_red',['../namespacetuipp_1_1colors.html#aac727d3f27297408e9cd184e55673523',1,'tuipp::colors']]],
   ['on_5fwhite_6',['on_white',['../namespacetuipp_1_1colors.html#a793877a88093d9bc3e487230db7ae90b',1,'tuipp::colors']]],
   ['on_5fyellow_7',['on_yellow',['../namespacetuipp_1_1colors.html#a08b6d8b007156c801a4a34238bb2ff9b',1,'tuipp::colors']]],
-  ['operator_3c_3c_8',['operator&lt;&lt;',['../classtuipp_1_1Console.html#ac026f757d12c438c51ee02f7cc763ed1',1,'tuipp::Console::operator&lt;&lt;(const T &amp;value)'],['../classtuipp_1_1Console.html#a3d4e63f8d4d199ddc1dcc0894685c8fe',1,'tuipp::Console::operator&lt;&lt;(std::ostream &amp;(*f)(std::ostream &amp;))'],['../classtuipp_1_1Console.html#ad0e6bf22a54866279fc9554f49208970',1,'tuipp::Console::operator&lt;&lt;(tuipp::widgets::IRenderable &amp;widget)']]]
+  ['operator_3c_3c_8',['operator&lt;&lt;',['../classtuipp_1_1Console.html#ac026f757d12c438c51ee02f7cc763ed1',1,'tuipp::Console::operator&lt;&lt;(const T &amp;value)'],['../classtuipp_1_1Console.html#a3d4e63f8d4d199ddc1dcc0894685c8fe',1,'tuipp::Console::operator&lt;&lt;(std::ostream &amp;(*f)(std::ostream &amp;))']]]
 ];
