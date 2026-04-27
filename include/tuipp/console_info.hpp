@@ -1,11 +1,3 @@
-/**
- * @file console_info.hpp
- *
- * @brief A header that contains useful methods and types for getting the console informations
- *
- * @author Giuliano De Amicis
- */
-
 #pragma once
 
 #include <cstddef>
@@ -15,6 +7,7 @@
 
 namespace tuipp {
 
+/// Some useful methods and types for getting the console information
 namespace console_info {
 
 struct TerminalSize

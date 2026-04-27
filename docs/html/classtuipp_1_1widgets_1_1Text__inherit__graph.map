@@ -1,5 +1,5 @@
 <map id="tuipp::widgets::Text" name="tuipp::widgets::Text">
-<area shape="rect" id="Node000001" title=" " alt="" coords="28,80,163,107"/>
+<area shape="rect" id="Node000001" title="Just normal text!" alt="" coords="28,80,163,107"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,5,186,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,46,98,81,93,79,94,50"/>
 </map>

@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-tuipp::widgets::Text
+tuipp::widgets::Text \- Just normal text!  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -18,6 +19,27 @@ Inherits tuipp::widgets::IRenderable\&.
 .RI "virtual void \fBrender\fP () const"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+Just normal text! 
+
+
+.SS "Examples of use"
+.PP
+.nf
+// Create the widget:
+auto text = tuipp::widgets::Text("Text widget!");
+
+// 3 ways of rendering it:
+tuipp::Console console;
+console << text;
+
+tuipp::Console::println(text);
+
+text\&.render();
+.fi
+.PP
+ 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "tuipp::widgets::Text::Text (std::string content)\fR [inline]\fP"

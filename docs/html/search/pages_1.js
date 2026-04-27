@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['styles_3a_0',['Styles:',['../classtuipp_1_1Console.html#autotoc_md2',1,'Styles:'],['../classtuipp_1_1Console.html#autotoc_md6',1,'Styles:']]]
+  ['of_20use_0',['of use',['../classtuipp_1_1widgets_1_1MarkupText.html#autotoc_md5',1,'Examples of use'],['../classtuipp_1_1widgets_1_1Text.html#autotoc_md8',1,'Examples of use']]]
 ];

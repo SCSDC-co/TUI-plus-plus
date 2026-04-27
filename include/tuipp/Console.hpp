@@ -1,11 +1,3 @@
-/**
- * @file Console.hpp
- *
- * @brief A class that represent a console with some useful utilities
- *
- * @author Giuliano De Amicis
- */
-
 #pragma once
 
 #include <iostream>
@@ -52,7 +44,9 @@ class Console
     inline static bool support_ansi{ tuipp::console_info::get_support_ansi() };
 
     /**
-     * @brief Print an output to the screen with a new line at the end (supports markup).
+     * @brief Print an output to the screen with a new line at the end.
+     *
+     * Also supports widgets and will call their `.render()` method.
      *
      * ## Examples:
      *
@@ -64,27 +58,6 @@ class Console
      * tuipp::Console::println("[blue]Number of files: [/]", 10, ".");
      * tuipp::Console::println("[green]This is green [bold]this is bold and green[reset] this is
      * normal");
-     * @endcode
-     *
-     * ## Styles:
-     *
-     * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright
-     * red`, `bright green`, `bright grey`, `bright blue`, `bright magenta`, `bright yellow`,
-     * `bright cyan`, `bright white`
-     *
-     * - Effects: `bold`, `underline`, `blink`, `italic`, `dim`, `strikethrough`, `conceal`,
-     * `reverse`
-     *
-     * - Reset: `/` (for one style), `reset` (for all styles)
-     *
-     * - For the background colors just type: `on <color>`
-     *
-     * ---
-     *
-     * You can also escape markup brackets using a backslash:
-     *
-     * @code{.cpp}
-     * tuipp::Console::println("\[bold red]Hello, World!\[/]");
      * @endcode
      *
      * ---
@@ -121,7 +94,9 @@ class Console
     }
 
     /**
-     * @brief Print an output to the screen without a new line at the end (supports markup).
+     * @brief Print an output to the screen without a new line at the end.
+     *
+     * Also supports widgets and will call their `.render()` method.
      *
      * ## Examples:
      *
@@ -133,27 +108,6 @@ class Console
      * tuipp::Console::print("[blue]Number of files: [/]", 10, ".");
      * tuipp::Console::print("[green]This is green [bold]this is bold and green[reset] this is
      * normal");
-     * @endcode
-     *
-     * ## Styles:
-     *
-     * - Foreground colors: `red`, `green`, `grey`, `blue`, `magenta`, `yellow`, `white`, `bright
-     * red`, `bright green`, `bright grey`, `bright blue`, `bright magenta`, `bright yellow`,
-     * `bright cyan`, `bright white`
-     *
-     * - Effects: `bold`, `underline`, `blink`, `italic`, `dim`, `strikethrough`, `conceal`,
-     * `reverse`
-     *
-     * - Reset: `/` (for one style), `reset` (for all styles)
-     *
-     * - For the background colors just type: `on <color>`
-     *
-     * ---
-     *
-     * You can also escape markup brackets using a backslash:
-     *
-     * @code{.cpp}
-     * tuipp::Console::print("\[bold red]Hello, World!\[/]");
      * @endcode
      *
      * ---

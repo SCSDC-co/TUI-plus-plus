@@ -25,11 +25,11 @@ tuipp::Console \- This is the class that represent a console\&.
 .ti -1c
 .RI "template<typename\&.\&.\&. Args> static void \fBprintln\fP (const Args &\&.\&.\&. content)"
 .br
-.RI "Print an output to the screen with a new line at the end (supports markup)\&. "
+.RI "Print an output to the screen with a new line at the end\&. "
 .ti -1c
 .RI "template<typename\&.\&.\&. Args> static void \fBprint\fP (const Args &\&.\&.\&. content)"
 .br
-.RI "Print an output to the screen without a new line at the end (supports markup)\&. "
+.RI "Print an output to the screen without a new line at the end\&. "
 .ti -1c
 .RI "static TUIPP_NODISCARD std::string \fBget_color_support_string\fP ()"
 .br
@@ -93,7 +93,7 @@ A << operator overload made for printing stream manipulators like \fRstd::endl\f
 .SS "template<typename\&.\&.\&. Args> void tuipp::Console::print (const Args &\&.\&.\&. content)\fR [inline]\fP, \fR [static]\fP"
 
 .PP
-Print an output to the screen without a new line at the end (supports markup)\&. 
+Print an output to the screen without a new line at the end\&. Also supports widgets and will call their \fR\&.render()\fP method\&.
 .SS "Examples:"
 .PP
 .nf
@@ -104,29 +104,6 @@ tuipp::Console::print(
 tuipp::Console::print("[blue]Number of files: [/]", 10, "\&.");
 tuipp::Console::print("[green]This is green [bold]this is bold and green[reset] this is
 normal");
-.fi
-.PP
-.SS "Styles:"
-.IP "\(bu" 2
-Foreground colors: \fRred\fP, \fRgreen\fP, \fRgrey\fP, \fRblue\fP, \fRmagenta\fP, \fRyellow\fP, \fRwhite\fP, \fRbright red\fP, \fRbright green\fP, \fRbright grey\fP, \fRbright blue\fP, \fRbright magenta\fP, \fRbright yellow\fP, \fRbright cyan\fP, \fRbright white\fP
-.IP "\(bu" 2
-Effects: \fRbold\fP, \fRunderline\fP, \fRblink\fP, \fRitalic\fP, \fRdim\fP, \fRstrikethrough\fP, \fRconceal\fP, \fRreverse\fP
-.IP "\(bu" 2
-Reset: \fR/\fP (for one style), \fRreset\fP (for all styles)
-.IP "\(bu" 2
-For the background colors just type: \fRon <color>\fP
-.PP
-
-.PP
-.PP
-
-.PP
-You can also escape markup brackets using a backslash:
-
-.PP
-.PP
-.nf
-tuipp::Console::print("\\[bold red]Hello, World!\\[/]");
 .fi
 .PP
 
@@ -159,7 +136,7 @@ A utility to print the console info in a nice format\&.
 .SS "template<typename\&.\&.\&. Args> void tuipp::Console::println (const Args &\&.\&.\&. content)\fR [inline]\fP, \fR [static]\fP"
 
 .PP
-Print an output to the screen with a new line at the end (supports markup)\&. 
+Print an output to the screen with a new line at the end\&. Also supports widgets and will call their \fR\&.render()\fP method\&.
 .SS "Examples:"
 .PP
 .nf
@@ -170,29 +147,6 @@ tuipp::Console::println(
 tuipp::Console::println("[blue]Number of files: [/]", 10, "\&.");
 tuipp::Console::println("[green]This is green [bold]this is bold and green[reset] this is
 normal");
-.fi
-.PP
-.SS "Styles:"
-.IP "\(bu" 2
-Foreground colors: \fRred\fP, \fRgreen\fP, \fRgrey\fP, \fRblue\fP, \fRmagenta\fP, \fRyellow\fP, \fRwhite\fP, \fRbright red\fP, \fRbright green\fP, \fRbright grey\fP, \fRbright blue\fP, \fRbright magenta\fP, \fRbright yellow\fP, \fRbright cyan\fP, \fRbright white\fP
-.IP "\(bu" 2
-Effects: \fRbold\fP, \fRunderline\fP, \fRblink\fP, \fRitalic\fP, \fRdim\fP, \fRstrikethrough\fP, \fRconceal\fP, \fRreverse\fP
-.IP "\(bu" 2
-Reset: \fR/\fP (for one style), \fRreset\fP (for all styles)
-.IP "\(bu" 2
-For the background colors just type: \fRon <color>\fP
-.PP
-
-.PP
-.PP
-
-.PP
-You can also escape markup brackets using a backslash:
-
-.PP
-.PP
-.nf
-tuipp::Console::println("\\[bold red]Hello, World!\\[/]");
 .fi
 .PP
 

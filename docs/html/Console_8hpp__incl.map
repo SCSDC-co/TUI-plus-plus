@@ -1,5 +1,5 @@
 <map id="include/tuipp/Console.hpp" name="include/tuipp/Console.hpp">
-<area shape="rect" id="Node000001" title="A class that represent a console with some useful utilities." alt="" coords="265,5,436,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="265,5,436,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,96,77,123"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,34,178,54,89,82,74,90,70,86,87,78,177,49,266,31"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="100,96,168,123"/>
@@ -14,7 +14,7 @@
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="386,30,504,74,498,75,385,35"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="650,187,782,213"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="436,21,510,28,585,39,651,55,677,65,695,78,710,99,718,124,721,173,716,169,713,125,705,102,691,82,674,70,650,60,584,44,509,33,437,27"/>
-<area shape="rect" id="Node000009" href="$console__info_8hpp.html" title="A header that contains useful methods and types for getting the console informations." alt="" coords="760,96,911,123"/>
+<area shape="rect" id="Node000009" href="$console__info_8hpp.html" title=" " alt="" coords="760,96,911,123"/>
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="436,28,578,48,738,77,784,91,779,91,736,83,577,53,437,33"/>
 <area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="821,122,746,180,744,175,816,124"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="806,187,870,213"/>

@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-tuipp::widgets::MarkupText
+tuipp::widgets::MarkupText \- A widget for writing colorful text easily\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -18,6 +19,50 @@ Inherits tuipp::widgets::IRenderable\&.
 .RI "virtual void \fBrender\fP () const"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+A widget for writing colorful text easily\&. 
+
+
+.SS "Examples of use"
+.PP
+.nf
+// Create the widget:
+auto markup_text = tuipp::widgets::MarkupText("[bold][green]Markup[/] [blue]text[/][/]");
+
+// 3 ways of rendering it:
+tuipp::Console console;
+console << markup_text;
+
+tuipp::Console::println(markup_text);
+
+markup_text\&.render();
+.fi
+.PP
+.SS "Styles:"
+.IP "\(bu" 2
+Foreground colors: \fRred\fP, \fRgreen\fP, \fRgrey\fP, \fRblue\fP, \fRmagenta\fP, \fRyellow\fP, \fRwhite\fP, \fRbright red\fP, \fRbright green\fP, \fRbright grey\fP, \fRbright blue\fP, \fRbright magenta\fP, \fRbright yellow\fP, \fRbright cyan\fP, \fRbright white\fP
+.IP "\(bu" 2
+Effects: \fRbold\fP, \fRunderline\fP, \fRblink\fP, \fRitalic\fP, \fRdim\fP, \fRstrikethrough\fP, \fRconceal\fP, \fRreverse\fP
+.IP "\(bu" 2
+Reset: \fR/\fP (for one style), \fRreset\fP (for all styles)
+.IP "\(bu" 2
+For the background colors just type: \fRon <color>\fP
+.PP
+
+.PP
+.PP
+
+.PP
+You can also escape markup brackets using a backslash:
+
+.PP
+.PP
+.nf
+tuipp::Console::print("\\[bold red]Hello, World!\\[/]");
+.fi
+.PP
+ 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "tuipp::widgets::MarkupText::MarkupText (std::string content)\fR [inline]\fP"

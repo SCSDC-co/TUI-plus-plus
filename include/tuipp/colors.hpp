@@ -1,11 +1,3 @@
-/**
- * @file colors.hpp
- *
- * @brief Plenty of colors!
- *
- * @author Giuliano De Amicis
- */
-
 #pragma once
 
 #include "../vendor/termcolor.hpp"
