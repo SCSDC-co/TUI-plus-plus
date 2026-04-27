@@ -2,8 +2,14 @@
 .ad l
 .nh
 .SH NAME
-include tuipp colors\&.hpp Console\&.hpp console_info\&.hpp 
+include tuipp widgets MarkupText\&.hpp Text\&.hpp 
 .PP
-tuipp colors\&.hpp Console\&.hpp console_info\&.hpp 
+colors\&.hpp Console\&.hpp console_info\&.hpp 
+.PP
+tuipp widgets MarkupText\&.hpp Text\&.hpp 
+.PP
+colors\&.hpp Console\&.hpp console_info\&.hpp 
+.PP
+widgets MarkupText\&.hpp Text\&.hpp 
 .PP
 

@@ -13,7 +13,8 @@
 #include <print>
 #include <string>
 
-#include "../../src/tuipp/string_parser/parse_string.hpp"
+#include "../../src/tuipp/widgets/IRenderable.hpp"
+#include "../../src/tuipp/widgets/markup_text/parser/parse_string.hpp"
 #include "private/macros.hpp"
 #include "tuipp/console_info.hpp"
 
@@ -107,7 +108,7 @@ class Console
         (
           [&]() {
               if constexpr (std::is_convertible_v<decltype(content), std::string>) {
-                  parse_string(output, content);
+                  tuipp::widgets::markup_text::parse_string(output, content);
               } else {
                   std::print("{}", content);
               }
@@ -172,12 +173,20 @@ class Console
         (
           [&]() {
               if constexpr (std::is_convertible_v<decltype(content), std::string>) {
-                  parse_string(std::cout, content);
+                  tuipp::widgets::markup_text::parse_string(std::cout, content);
               } else {
                   std::print("{}", content);
               }
           }(),
           ...);
+    }
+
+    static void print(widgets::IRenderable& item) { item.render(); }
+    static void println(widgets::IRenderable& item)
+    {
+        item.render();
+
+        std::cout << std::endl;
     }
 
     /// @return the color support as a string
@@ -229,6 +238,14 @@ class Console
     )
     {
         std::cout << f;
+
+        return *this;
+    }
+
+    /// A specialization for printing widgets
+    Console& operator<<(tuipp::widgets::IRenderable& widget)
+    {
+        widget.render();
 
         return *this;
     }

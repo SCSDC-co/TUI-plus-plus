@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_0',['white',['../namespacetuipp_1_1colors.html#abd58ef049ee2f707a6549ea27457861e',1,'tuipp::colors']]]
+  ['underline_0',['underline',['../namespacetuipp_1_1colors.html#a3cc005cb077f1dc05d9d36b1385736a6',1,'tuipp::colors']]]
 ];

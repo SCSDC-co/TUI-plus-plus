@@ -18,6 +18,10 @@ tuipp::Console \- This is the class that represent a console\&.
 .RI "\fBConsole\fP & \fBoperator<<\fP (std::ostream &(*f)(std::ostream &))"
 .br
 .RI "A << operator overload made for printing stream manipulators like \fRstd::endl\fP\&. "
+.ti -1c
+.RI "\fBConsole\fP & \fBoperator<<\fP (tuipp::widgets::IRenderable &widget)"
+.br
+.RI "A specialization for printing widgets\&. "
 .in -1c
 .SS "Static Public Member Functions"
 
@@ -30,6 +34,12 @@ tuipp::Console \- This is the class that represent a console\&.
 .RI "template<typename\&.\&.\&. Args> static void \fBprint\fP (const Args &\&.\&.\&. content)"
 .br
 .RI "Print an output to the screen without a new line at the end (supports markup)\&. "
+.ti -1c
+.RI "static void \fBprint\fP (widgets::IRenderable &item)"
+.br
+.ti -1c
+.RI "static void \fBprintln\fP (widgets::IRenderable &item)"
+.br
 .ti -1c
 .RI "static TUIPP_NODISCARD std::string \fBget_color_support_string\fP ()"
 .br
@@ -90,6 +100,10 @@ A << operator overload made for printing things in the \fRstd::cout\fP style\&.
 
 .PP
 A << operator overload made for printing stream manipulators like \fRstd::endl\fP\&. 
+.SS "\fBConsole\fP & tuipp::Console::operator<< (tuipp::widgets::IRenderable & widget)\fR [inline]\fP"
+
+.PP
+A specialization for printing widgets\&. 
 .SS "template<typename\&.\&.\&. Args> void tuipp::Console::print (const Args &\&.\&.\&. content)\fR [inline]\fP, \fR [static]\fP"
 
 .PP
@@ -151,6 +165,8 @@ tuipp::Console::print(vector);
 \fIcontent\fP The items you want to print, they can be of any type and you can pass as many as you want\&. 
 .RE
 .PP
+
+.SS "void tuipp::Console::print (widgets::IRenderable & item)\fR [inline]\fP, \fR [static]\fP"
 
 .SS "void tuipp::Console::print_info (const bool & color)\fR [inline]\fP, \fR [static]\fP"
 
@@ -217,6 +233,8 @@ tuipp::Console::println(vector);
 \fIcontent\fP The items you want to print, they can be of any type and you can pass as many as you want\&. 
 .RE
 .PP
+
+.SS "void tuipp::Console::println (widgets::IRenderable & item)\fR [inline]\fP, \fR [static]\fP"
 
 .SH "Member Data Documentation"
 .PP 

@@ -11,6 +11,10 @@
 
 namespace tuipp {
 
+namespace widgets {
+
+namespace markup_text {
+
 template<typename CharT>
 std::basic_ostream<CharT>&
 parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
@@ -56,5 +60,9 @@ parse_string(std::basic_ostream<CharT>& stream, const std::string& string)
 
     return stream;
 }
+
+} // namespace markup_text
+
+} // namespace widgets
 
 } // namespace tuipp
