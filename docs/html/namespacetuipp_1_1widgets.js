@@ -49,6 +49,11 @@ var namespacetuipp_1_1widgets =
         [ "BRIGHT_YELLOW", "namespacetuipp_1_1widgets_1_1styles.html#ad205737fbe2c5c5b51a9342237e0ad4ea2373edc9b8eb3a49710b95c6f7906434", null ],
         [ "BRIGHT_CYAN", "namespacetuipp_1_1widgets_1_1styles.html#ad205737fbe2c5c5b51a9342237e0ad4eaa74a6a719de5de03a46f89ce260fa4b7", null ],
         [ "BRIGHT_WHITE", "namespacetuipp_1_1widgets_1_1styles.html#ad205737fbe2c5c5b51a9342237e0ad4ea376520e57593580aa5c7ef8cf5136946", null ]
+      ] ],
+      [ "Justification", "namespacetuipp_1_1widgets_1_1styles.html#aa2f44bf2d86debfd5ee546023b8a0e27", [
+        [ "LEFT", "namespacetuipp_1_1widgets_1_1styles.html#aa2f44bf2d86debfd5ee546023b8a0e27a684d325a7303f52e64011467ff5c5758", null ],
+        [ "CENTER", "namespacetuipp_1_1widgets_1_1styles.html#aa2f44bf2d86debfd5ee546023b8a0e27ac397289ee45877be0cd49811fe245b4e", null ],
+        [ "RIGHT", "namespacetuipp_1_1widgets_1_1styles.html#aa2f44bf2d86debfd5ee546023b8a0e27a21507b40c80068eda19865706fdc2403", null ]
       ] ]
     ] ],
     [ "MarkupText", "classtuipp_1_1widgets_1_1MarkupText.html", "classtuipp_1_1widgets_1_1MarkupText" ],

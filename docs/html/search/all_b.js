@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['print_0',['print',['../classtuipp_1_1Console.html#aa854d1ad5dd6145c1686e3f2617740a0',1,'tuipp::Console']]],
-  ['print_5finfo_1',['print_info',['../classtuipp_1_1Console.html#af8cc9ec4e52216d8fed6af5e849f5312',1,'tuipp::Console']]],
-  ['println_2',['println',['../classtuipp_1_1Console.html#a1017c32f551adba0aba8b182dca0eec6',1,'tuipp::Console']]]
+  ['no_5fcolors_0',['NO_COLORS',['../namespacetuipp_1_1console__info.html#ac4ba349e3647f800304af392b50fa1f8a22c560e28ed72a875951ad71137c6cd7',1,'tuipp::console_info']]],
+  ['none_1',['NONE',['../namespacetuipp_1_1widgets_1_1styles.html#a765dc82569014176602929fbb3fdf5c6ab50339a10e1de285ac99d4c3990b8693',1,'tuipp::widgets::styles::NONE'],['../namespacetuipp_1_1widgets_1_1styles.html#ae93fbc40f23aafc5cc59d42ed7d91540ab50339a10e1de285ac99d4c3990b8693',1,'tuipp::widgets::styles::NONE'],['../namespacetuipp_1_1widgets_1_1styles.html#ad205737fbe2c5c5b51a9342237e0ad4eab50339a10e1de285ac99d4c3990b8693',1,'tuipp::widgets::styles::NONE']]]
 ];

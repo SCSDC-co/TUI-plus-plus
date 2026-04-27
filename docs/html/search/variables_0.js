@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['color_5fsupport_0',['color_support',['../classtuipp_1_1Console.html#aef8da29440799aab9f93a48dfc25e5eb',1,'tuipp::Console']]]
+  ['background_0',['background',['../classtuipp_1_1widgets_1_1Text.html#a5f43ea19eecd7df1907b91bc22ec4f72',1,'tuipp::widgets::Text']]]
 ];

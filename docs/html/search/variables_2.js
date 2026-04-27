@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['support_5fansi_0',['support_ansi',['../classtuipp_1_1Console.html#a126a92543149716d8f2b896691dfa28a',1,'tuipp::Console']]]
+  ['effects_0',['effects',['../classtuipp_1_1widgets_1_1Text.html#ada64f3168c7a2bc565369f2dd3b78a90',1,'tuipp::widgets::Text']]]
 ];

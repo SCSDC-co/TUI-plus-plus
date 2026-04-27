@@ -2,21 +2,21 @@
 .ad l
 .nh
 .SH NAME
-include tuipp widgets styles Background\&.hpp Effects\&.hpp Foreground\&.hpp 
+include tuipp widgets styles Background\&.hpp Effects\&.hpp Foreground\&.hpp Justification\&.hpp 
 .PP
 MarkupText\&.hpp Text\&.hpp 
 .PP
 colors\&.hpp Console\&.hpp console_info\&.hpp 
 .PP
-styles Background\&.hpp Effects\&.hpp Foreground\&.hpp 
+styles Background\&.hpp Effects\&.hpp Foreground\&.hpp Justification\&.hpp 
 .PP
-tuipp widgets styles Background\&.hpp Effects\&.hpp Foreground\&.hpp 
+tuipp widgets styles Background\&.hpp Effects\&.hpp Foreground\&.hpp Justification\&.hpp 
 .PP
 MarkupText\&.hpp Text\&.hpp 
 .PP
 colors\&.hpp Console\&.hpp console_info\&.hpp 
 .PP
-widgets styles Background\&.hpp Effects\&.hpp Foreground\&.hpp 
+widgets styles Background\&.hpp Effects\&.hpp Foreground\&.hpp Justification\&.hpp 
 .PP
 MarkupText\&.hpp Text\&.hpp 
 .PP

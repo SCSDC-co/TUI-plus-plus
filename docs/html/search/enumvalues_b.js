@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['underline_0',['UNDERLINE',['../namespacetuipp_1_1widgets_1_1styles.html#ae93fbc40f23aafc5cc59d42ed7d91540a0086c73c90c261db630b4dc8aea09bcf',1,'tuipp::widgets::styles']]]
+  ['true_5fcolor_0',['TRUE_COLOR',['../namespacetuipp_1_1console__info.html#ac4ba349e3647f800304af392b50fa1f8ac724fff88009cf80292aa8af9cf5db52',1,'tuipp::console_info']]]
 ];

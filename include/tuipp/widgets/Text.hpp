@@ -7,6 +7,7 @@
 #include "tuipp/widgets/styles/Background.hpp"
 #include "tuipp/widgets/styles/Effects.hpp"
 #include "tuipp/widgets/styles/Foreground.hpp"
+#include "tuipp/widgets/styles/Justification.hpp"
 
 namespace tuipp {
 
@@ -43,11 +44,19 @@ namespace widgets {
 class Text : public tuipp::widgets::IRenderable
 {
   public:
+    styles::Foreground foreground{};
+    styles::Background background{};
+    std::vector<styles::Effects> effects{};
+
+    styles::Justification justification{};
+
     Text(std::string content,
+         styles::Justification justification  = styles::Justification::LEFT,
          styles::Foreground foreground        = styles::Foreground::NONE,
          styles::Background background        = styles::Background::NONE,
          std::vector<styles::Effects> effects = { styles::Effects::NONE })
       : content(content)
+      , justification(justification)
       , foreground(foreground)
       , background(background)
       , effects(effects)
@@ -58,10 +67,6 @@ class Text : public tuipp::widgets::IRenderable
 
   private:
     std::string content{};
-
-    styles::Foreground foreground{};
-    styles::Background background{};
-    std::vector<styles::Effects> effects{};
 };
 
 } // namespace widgets
