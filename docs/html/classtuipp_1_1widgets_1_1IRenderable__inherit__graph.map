@@ -1,0 +1,9 @@
+<map id="tuipp::widgets::IRenderable" name="tuipp::widgets::IRenderable">
+<area shape="rect" id="Node000001" title="The base class for every widgets, exposed so you can create your own!" alt="" coords="186,5,366,32"/>
+<area shape="rect" id="Node000002" href="$classtuipp_1_1widgets_1_1MarkupText.html" title="A widget for writing colorful text easily." alt="" coords="5,80,184,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,39,127,82,125,77,228,38"/>
+<area shape="rect" id="Node000003" href="$classtuipp_1_1widgets_1_1Rule.html" title=" " alt="" coords="207,80,344,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="278,46,278,81,274,78,274,50"/>
+<area shape="rect" id="Node000004" href="$classtuipp_1_1widgets_1_1Text.html" title="Just normal text!" alt="" coords="368,80,504,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,36,410,79,405,79,317,41"/>
+</map>

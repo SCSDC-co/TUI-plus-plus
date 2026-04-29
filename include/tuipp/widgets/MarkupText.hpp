@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "../../../src/tuipp/widgets/IRenderable.hpp"
+#include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {
 

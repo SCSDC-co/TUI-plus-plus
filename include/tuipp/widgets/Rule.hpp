@@ -2,10 +2,10 @@
 
 #include <string>
 
-#include "../../../src/tuipp/widgets/IRenderable.hpp"
-#include "../styles/Border.hpp"
-#include "../styles/Foreground.hpp"
-#include "../styles/Justification.hpp"
+#include "tuipp/styles/Border.hpp"
+#include "tuipp/styles/Foreground.hpp"
+#include "tuipp/styles/Justification.hpp"
+#include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {
 

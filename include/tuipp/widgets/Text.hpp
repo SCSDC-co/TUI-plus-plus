@@ -3,11 +3,11 @@
 #include <string>
 #include <vector>
 
-#include "../../../src/tuipp/widgets/IRenderable.hpp"
 #include "tuipp/styles/Background.hpp"
 #include "tuipp/styles/Effects.hpp"
 #include "tuipp/styles/Foreground.hpp"
 #include "tuipp/styles/Justification.hpp"
+#include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {
 

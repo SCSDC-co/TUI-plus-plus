@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <cstdlib>
 
-#include "private/macros.hpp"
+#include "tuipp/private/macros.hpp"
 
 namespace tuipp {
 

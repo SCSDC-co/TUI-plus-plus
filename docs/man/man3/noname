@@ -4,7 +4,7 @@
 .SH NAME
 include tuipp styles Background\&.hpp Border\&.hpp Effects\&.hpp Foreground\&.hpp Justification\&.hpp 
 .PP
-widgets MarkupText\&.hpp Rule\&.hpp Text\&.hpp 
+widgets IRenderable\&.hpp MarkupText\&.hpp Rule\&.hpp Text\&.hpp 
 .PP
 colors\&.hpp Console\&.hpp console_info\&.hpp 
 .PP
@@ -12,10 +12,10 @@ styles Background\&.hpp Border\&.hpp Effects\&.hpp Foreground\&.hpp Justificatio
 .PP
 tuipp styles Background\&.hpp Border\&.hpp Effects\&.hpp Foreground\&.hpp Justification\&.hpp 
 .PP
-widgets MarkupText\&.hpp Rule\&.hpp Text\&.hpp 
+widgets IRenderable\&.hpp MarkupText\&.hpp Rule\&.hpp Text\&.hpp 
 .PP
 colors\&.hpp Console\&.hpp console_info\&.hpp 
 .PP
-widgets MarkupText\&.hpp Rule\&.hpp Text\&.hpp 
+widgets IRenderable\&.hpp MarkupText\&.hpp Rule\&.hpp Text\&.hpp 
 .PP
 

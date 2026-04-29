@@ -48,12 +48,15 @@ include/tuipp/styles/Border.hpp
 .ti -1c
 .RI "enum class \fBtuipp::styles::border::BorderType\fP { \fBtuipp::styles::border::NONE\fP, \fBtuipp::styles::border::ASCII\fP, \fBtuipp::styles::border::DOUBLE\fP, \fBtuipp::styles::border::HEAVY\fP, \fBtuipp::styles::border::ROUNDED\fP, \fBtuipp::styles::border::SQUARE\fP }"
 .br
+.ti -1c
+.RI "enum class \fBtuipp::styles::border::BorderParts\fP { \fBtuipp::styles::border::TOP_LEFT\fP, \fBtuipp::styles::border::TOP\fP, \fBtuipp::styles::border::TOP_RIGHT\fP, \fBtuipp::styles::border::LEFT\fP, \fBtuipp::styles::border::RIGHT\fP, \fBtuipp::styles::border::BOTTOM_LEFT\fP, \fBtuipp::styles::border::BOTTOM\fP, \fBtuipp::styles::border::BOTTOM_RIGHT\fP }"
+.br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "TUIPP_NODISCARD std::string \fBtuipp::styles::border::get_part_from_border_type\fP (\fBBorderType\fP type, BorderParts part)"
+.RI "TUIPP_NODISCARD std::string \fBtuipp::styles::border::get_part_from_border_type\fP (\fBBorderType\fP type, \fBBorderParts\fP part)"
 .br
 .in -1c
 .SH "Author"

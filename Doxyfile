@@ -5,7 +5,7 @@
 # │                                                          │
 # │ mkdir build                                              │
 # │ cd build                                                 │
-# │ cmake .. -DTUIPP_BUILD_DOCS=True && ninja                │
+# │ cmake .. -DTUIPP_BUILD_DOCS=True && cmake --build .      │
 # ╰──────────────────────────────────────────────────────────╯
 
 # This file describes the settings to be used by the documentation system

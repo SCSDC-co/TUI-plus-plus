@@ -34,16 +34,40 @@ tuipp::styles::border
 .ti -1c
 .RI "enum class \fBBorderType\fP { \fBNONE\fP, \fBASCII\fP, \fBDOUBLE\fP, \fBHEAVY\fP, \fBROUNDED\fP, \fBSQUARE\fP }"
 .br
+.ti -1c
+.RI "enum class \fBBorderParts\fP { \fBTOP_LEFT\fP, \fBTOP\fP, \fBTOP_RIGHT\fP, \fBLEFT\fP, \fBRIGHT\fP, \fBBOTTOM_LEFT\fP, \fBBOTTOM\fP, \fBBOTTOM_RIGHT\fP }"
+.br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "TUIPP_NODISCARD std::string \fBget_part_from_border_type\fP (\fBBorderType\fP type, BorderParts part)"
+.RI "TUIPP_NODISCARD std::string \fBget_part_from_border_type\fP (\fBBorderType\fP type, \fBBorderParts\fP part)"
 .br
 .in -1c
 .SH "Enumeration Type Documentation"
 .PP 
+.SS "enum class \fBtuipp::styles::border::BorderParts\fP\fR [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BITOP_LEFT \fP
+.TP
+\f(BITOP \fP
+.TP
+\f(BITOP_RIGHT \fP
+.TP
+\f(BILEFT \fP
+.TP
+\f(BIRIGHT \fP
+.TP
+\f(BIBOTTOM_LEFT \fP
+.TP
+\f(BIBOTTOM \fP
+.TP
+\f(BIBOTTOM_RIGHT \fP
 .SS "enum class \fBtuipp::styles::border::BorderType\fP\fR [strong]\fP"
 
 .PP
@@ -63,7 +87,7 @@ tuipp::styles::border
 \f(BISQUARE \fP
 .SH "Function Documentation"
 .PP 
-.SS "TUIPP_NODISCARD std::string tuipp::styles::border::get_part_from_border_type (\fBBorderType\fP type, BorderParts part)"
+.SS "TUIPP_NODISCARD std::string tuipp::styles::border::get_part_from_border_type (\fBBorderType\fP type, \fBBorderParts\fP part)"
 
 .SH "Author"
 .PP 

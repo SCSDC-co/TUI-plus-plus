@@ -2,7 +2,6 @@
 
 #include <string>
 
-#include "../../../src/tuipp/borders/BorderParts.hpp"
 #include "tuipp/private/macros.hpp"
 
 namespace tuipp {
@@ -19,6 +18,18 @@ enum class BorderType
     HEAVY,
     ROUNDED,
     SQUARE,
+};
+
+enum class BorderParts
+{
+    TOP_LEFT,
+    TOP,
+    TOP_RIGHT,
+    LEFT,
+    RIGHT,
+    BOTTOM_LEFT,
+    BOTTOM,
+    BOTTOM_RIGHT,
 };
 
 TUIPP_NODISCARD std::string

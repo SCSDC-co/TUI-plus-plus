@@ -4,7 +4,7 @@ var hierarchy =
     [ "tuipp::Console", "classtuipp_1_1Console.html", null ],
     [ "tuipp::styles::border::Double", "structtuipp_1_1styles_1_1border_1_1Double.html", null ],
     [ "tuipp::styles::border::Heavy", "structtuipp_1_1styles_1_1border_1_1Heavy.html", null ],
-    [ "tuipp::widgets::IRenderable", null, [
+    [ "tuipp::widgets::IRenderable", "classtuipp_1_1widgets_1_1IRenderable.html", [
       [ "tuipp::widgets::MarkupText", "classtuipp_1_1widgets_1_1MarkupText.html", null ],
       [ "tuipp::widgets::Rule", "classtuipp_1_1widgets_1_1Rule.html", null ],
       [ "tuipp::widgets::Text", "classtuipp_1_1widgets_1_1Text.html", null ]

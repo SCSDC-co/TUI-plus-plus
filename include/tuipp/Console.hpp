@@ -5,10 +5,10 @@
 #include <print>
 #include <string>
 
-#include "../../src/tuipp/widgets/IRenderable.hpp"
 #include "../../src/tuipp/widgets/markup_text/parser/parse_string.hpp"
-#include "console_info.hpp"
-#include "private/macros.hpp"
+#include "tuipp/console_info.hpp"
+#include "tuipp/private/macros.hpp"
+#include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {
 

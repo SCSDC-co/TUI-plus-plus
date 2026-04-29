@@ -2,8 +2,6 @@
 
 #include <string>
 
-#include "BorderParts.hpp"
-
 namespace tuipp {
 
 namespace styles {
