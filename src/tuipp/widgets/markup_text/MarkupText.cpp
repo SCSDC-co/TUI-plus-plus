@@ -1,4 +1,4 @@
-#include "../../../../include/tuipp/widgets/MarkupText.hpp"
+#include "tuipp/widgets/MarkupText.hpp"
 
 #include "parser/parse_string.hpp"
 

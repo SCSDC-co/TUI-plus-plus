@@ -1,13 +1,13 @@
-#include "../../../include/tuipp/widgets/Text.hpp"
+#include "tuipp/widgets/Text.hpp"
 
 #include <cstddef>
 #include <iostream>
 #include <string>
 
-#include "../../../include/tuipp/styles/Justification.hpp"
-#include "../../../include/vendor/termcolor.hpp"
-#include "../tuipp/Console.hpp"
 #include "apply_styles.hpp"
+#include "tuipp/Console.hpp"
+#include "tuipp/styles/Justification.hpp"
+#include "vendor/termcolor.hpp"
 #include "widgets/apply_styles.hpp"
 
 namespace tuipp {

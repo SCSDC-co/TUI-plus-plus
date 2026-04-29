@@ -24,30 +24,16 @@ target_include_directories(
     ${PROJECT_NAME}
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/tuipp
     PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/tuipp>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
 add_subdirectory(./include/tuipp/)
 
-# This is for preserving the folder structure
-foreach(header ${public_headers})
-    file(
-        RELATIVE_PATH
-        header_file_path
-        "${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}"
-        "${header}"
-    )
-    get_filename_component(
-        header_directory_path
-        "${header_file_path}"
-        DIRECTORY
-    )
-    install(
-        FILES ${header}
-        DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${header_directory_path}"
-    )
-endforeach()
+set_target_properties(
+    ${PROJECT_NAME}
+    PROPERTIES PUBLIC_HEADER "${public_headers}"
+)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX "d")
 

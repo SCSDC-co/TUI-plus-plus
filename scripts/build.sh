@@ -13,7 +13,7 @@ cmake .. --preset default -DTUIPP_BUILD_DOCS=True || {
     exit 1
 }
 
-ninja || {
+cmake --build . || {
     echo "ninja failed"
     exit 1
 }
