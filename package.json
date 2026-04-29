@@ -1,0 +1,17 @@
+{
+  "name": "TUI++ docs site",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A simple TUI library heavily inspired by rich and Spectre.Console",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "author": "Giuliano De Amicis",
+  "license": "GPL-3.0-only",
+  "packageManager": "pnpm@10.33.2",
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.17"
+  }
+}

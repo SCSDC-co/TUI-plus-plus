@@ -1,9 +1,0 @@
-<map id="include/tuipp/console_info.hpp" name="include/tuipp/console_info.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="51,5,194,48"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,70,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,48,63,87,60,83,98,50"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="93,96,152,123"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,47,125,81,120,79,121,51"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="177,96,341,123"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,46,227,87,222,88,157,51"/>
-</map>

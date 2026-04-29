@@ -11,3 +11,9 @@ CMakeUserPresets.json
 
 # they are useful ngl
 !.vscode/tasks.json
+
+# vitepress shit
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+node_modules/
