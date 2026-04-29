@@ -20,6 +20,10 @@ export default defineConfig({
       { text: "Examples", link: "/markdown-examples" },
     ],
 
+    search: {
+      provider: "local",
+    },
+
     editLink: {
       pattern: "https://github.com/SCSDC-co/tuipp/edit/main/docs/:path",
     },
