@@ -30,6 +30,8 @@ jobs:
           compiler: llvm
           ninja: true
 
+      - run: cd ..
+
       - name: Create the build directory
         run: mkdir build
 
