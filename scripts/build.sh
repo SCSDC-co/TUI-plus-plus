@@ -14,6 +14,6 @@ cmake .. -DTUIPP_BUILD_DOCS=ON || {
 }
 
 cmake --build . || {
-    echo "ninja failed"
+    echo "build failed"
     exit 1
 }

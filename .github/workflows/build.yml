@@ -1,0 +1,30 @@
+name: build the library to see if it works
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Cpp
+        uses: aminya/setup-cpp@v1
+        with:
+          compiler: llvm
+          cmake: true
+          ninja: true
+
+      - name: Create the build directory
+        run: mkdir build
+
+      - name: Build the project
+        run: ./scripts/build.sh
