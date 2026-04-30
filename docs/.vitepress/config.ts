@@ -21,6 +21,10 @@ export default defineConfig({
       { text: "Widgets", link: "/widgets/text" },
     ],
 
+    socialLinks: [
+      { icon: "github", link: "https://github.com/SCSDC-co/tuipp" },
+    ],
+
     search: {
       provider: "local",
     },
@@ -66,10 +70,6 @@ export default defineConfig({
           },
         ],
       },
-    ],
-
-    socialLinks: [
-      { icon: "github", link: "https://github.com/SCSDC-co/tuipp" },
     ],
   },
 });

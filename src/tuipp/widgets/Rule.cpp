@@ -4,7 +4,7 @@
 #include <ostream>
 
 #include "apply_styles.hpp"
-#include "markup_text/parser/get_text_lenght.hpp"
+#include "markup_text/parser/get_text_length.hpp"
 #include "markup_text/parser/parse_string.hpp"
 #include "tuipp/Console.hpp"
 #include "vendor/termcolor.hpp"
@@ -18,7 +18,7 @@ Rule::render() const
 {
     std::ostream& output{ std::cout };
 
-    int content_lenght{ markup_text::get_text_lenght(this->content) };
+    int content_length{ markup_text::get_text_length(this->content) };
 
     std::size_t total_width{ Console::terminal_size.width };
 
@@ -28,14 +28,14 @@ Rule::render() const
     switch (this->justification) {
         case styles::Justification::LEFT:
             padding_left  = 0;
-            padding_right = total_width - content_lenght;
+            padding_right = total_width - content_length;
             break;
         case styles::Justification::CENTER:
-            padding_left  = (total_width / 2) - (content_lenght / 2);
-            padding_right = (total_width / 2) - (content_lenght / 2);
+            padding_left  = (total_width / 2) - (content_length / 2);
+            padding_right = (total_width / 2) - (content_length / 2);
             break;
         case styles::Justification::RIGHT:
-            padding_left  = total_width - content_lenght;
+            padding_left  = total_width - content_length;
             padding_right = 0;
             break;
     }
@@ -58,7 +58,7 @@ Rule::render() const
 
     apply_foreground(output, this->color);
 
-    width += content_lenght;
+    width += content_length;
 
     for (int i = 0; i < padding_right && width < total_width; ++i) {
         output << this->fill_char;

@@ -25,7 +25,7 @@
 .VPNavBarSearchButton {
   border: 1px var(--vp-c-bg) solid;
 
-  transition: all 250ms;
+  transition: border-color 0.25s;
 }
 
 .VPNavBarSearchButton:hover {

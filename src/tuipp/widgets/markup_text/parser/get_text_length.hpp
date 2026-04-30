@@ -9,9 +9,9 @@ namespace widgets {
 namespace markup_text {
 
 inline int
-get_text_lenght(const std::string& string)
+get_text_length(const std::string& string)
 {
-    int lenght{ 0 };
+    int length{ 0 };
 
     char prev_char{};
 
@@ -33,13 +33,13 @@ get_text_lenght(const std::string& string)
                 ++i;
             }
 
-            ++lenght;
+            ++length;
         }
 
         prev_char = current_char;
     }
 
-    return lenght;
+    return length;
 }
 
 } // namespace markup_text
