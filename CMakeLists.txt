@@ -11,7 +11,7 @@ project(
     LANGUAGES CXX
     VERSION 0.0.1
     DESCRIPTION
-        "A header-only simple TUI library heavily inspired by rich and Spectre.Console"
+        "A simple TUI library heavily inspired by rich and Spectre.Console"
 )
 
 include(GNUInstallDirs)
@@ -62,5 +62,3 @@ install(
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
-
-include(./cmake/doxygen.cmake)
