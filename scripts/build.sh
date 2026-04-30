@@ -8,7 +8,7 @@ cd "$(dirname "$0")" || exit 1
 
 cd ../build || exit 1
 
-cmake .. -DTUIPP_BUILD_DOCS=ON || {
+cmake .. || {
     echo "cmake failed"
     exit 1
 }
