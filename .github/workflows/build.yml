@@ -16,11 +16,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Setup cmake
+        uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: '4.0.x'
+
       - name: Setup Cpp
         uses: aminya/setup-cpp@v1
         with:
           compiler: llvm
-          cmake: true
           ninja: true
 
       - name: Create the build directory
