@@ -4,10 +4,10 @@
 #include <iostream>
 #include <string>
 
+#include "../vendor/termcolor.hpp"
 #include "apply_styles.hpp"
 #include "tuipp/Console.hpp"
 #include "tuipp/styles/Justification.hpp"
-#include "vendor/termcolor.hpp"
 #include "widgets/apply_styles.hpp"
 
 namespace tuipp {

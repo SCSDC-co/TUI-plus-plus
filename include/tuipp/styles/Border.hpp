@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "tuipp/private/macros.hpp"
+#include "../tuipp/private/macros.hpp"
 
 namespace tuipp {
 

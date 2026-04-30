@@ -3,11 +3,11 @@
 #include <cstddef>
 #include <ostream>
 
+#include "../vendor/termcolor.hpp"
 #include "apply_styles.hpp"
 #include "markup_text/parser/get_text_length.hpp"
 #include "markup_text/parser/parse_string.hpp"
 #include "tuipp/Console.hpp"
-#include "vendor/termcolor.hpp"
 
 namespace tuipp {
 

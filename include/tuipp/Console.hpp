@@ -6,9 +6,9 @@
 #include <string>
 #include <string_view>
 
-#include "../../src/tuipp/widgets/markup_text/parser/parse_string.hpp"
+#include "../tuipp/private/macros.hpp"
+#include "../tuipp/widgets/markup_text/parser/parse_string.hpp"
 #include "tuipp/console_info.hpp"
-#include "tuipp/private/macros.hpp"
 #include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {

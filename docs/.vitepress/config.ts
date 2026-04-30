@@ -15,6 +15,13 @@ export default defineConfig({
 
   base: "/tuipp/",
 
+  markdown: {
+    toc: {
+      shouldAllowNested: true,
+      level: [1, 2, 3, 4, 5],
+    },
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
