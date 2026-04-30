@@ -8,17 +8,15 @@ hero:
   tagline: "Heavily inspired by rich and Spectre.Console"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get started
+      link: /get-started/install
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Widgets
+      link: /widgets/text
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Light weight
+    details: This library is aimed to be fast and easy to use
+  - title: User-first
+    details: It's made to be more user-friendly as possible
 ---

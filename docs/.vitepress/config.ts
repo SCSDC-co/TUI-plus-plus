@@ -17,7 +17,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Get started", link: "/get-started/install" },
+      { text: "Widgets", link: "/widgets/text" },
     ],
 
     search: {
@@ -30,11 +31,39 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Getting started",
+        text: "Get Started",
         collapsed: false,
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          {
+            text: "How To Install It",
+            link: "/get-started/install",
+          },
+          {
+            text: "How To Create Custom Widgets",
+            link: "/get-started/how-to-create-custom-widgets",
+          },
+          {
+            text: "Why TUI++?",
+            link: "/get-started/why",
+          },
+        ],
+      },
+      {
+        text: "Widgets",
+        collapsed: false,
+        items: [
+          {
+            text: "Text",
+            link: "/widgets/text.md",
+          },
+          {
+            text: "Markup Text",
+            link: "/widgets/markup-text.md",
+          },
+          {
+            text: "Rule",
+            link: "/widgets/rule.md",
+          },
         ],
       },
     ],
