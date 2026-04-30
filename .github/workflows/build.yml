@@ -1,4 +1,4 @@
-name: build the library to see if it works
+name: build the library
 
 on:
   push:
@@ -7,6 +7,9 @@ on:
     branches: [ "main" ]
 
   workflow_dispatch:
+
+env:
+  CMAKE_GENERATOR: Ninja
 
 jobs:
   build:
@@ -21,7 +24,7 @@ jobs:
         with:
           cmake-version: '4.0.x'
 
-      - name: Setup Cpp
+      - name: Setup C++
         uses: aminya/setup-cpp@v1
         with:
           compiler: llvm
