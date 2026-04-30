@@ -6,8 +6,8 @@
 #include <string>
 #include <string_view>
 
-#include "../tuipp/private/macros.hpp"
-#include "../tuipp/widgets/markup_text/parser/parse_string.hpp"
+#include "../src/tuipp/private/macros.hpp"
+#include "../src/tuipp/widgets/markup_text/parser/parse_string.hpp"
 #include "tuipp/console_info.hpp"
 #include "tuipp/widgets/IRenderable.hpp"
 

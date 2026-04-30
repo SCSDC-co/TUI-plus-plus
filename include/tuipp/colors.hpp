@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../vendor/termcolor.hpp"
+#include "../src/vendor/termcolor.hpp"
 
 namespace tuipp {
 

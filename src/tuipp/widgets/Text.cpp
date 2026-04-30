@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-#include "../vendor/termcolor.hpp"
+#include "../src/vendor/termcolor.hpp"
 #include "apply_styles.hpp"
 #include "tuipp/Console.hpp"
 #include "tuipp/styles/Justification.hpp"

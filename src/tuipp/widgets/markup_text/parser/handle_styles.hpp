@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "../../Style.hpp"
-#include "../vendor/termcolor.hpp"
+#include "../src/vendor/termcolor.hpp"
 
 namespace tuipp {
 

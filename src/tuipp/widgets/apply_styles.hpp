@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../vendor/termcolor.hpp"
+#include "../src/vendor/termcolor.hpp"
 #include "tuipp/styles/Background.hpp"
 #include "tuipp/styles/Effects.hpp"
 #include "tuipp/styles/Foreground.hpp"

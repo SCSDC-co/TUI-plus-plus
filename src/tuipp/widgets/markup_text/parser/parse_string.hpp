@@ -5,7 +5,7 @@
 #include <ostream>
 #include <vector>
 
-#include "../vendor/termcolor.hpp"
+#include "../src/vendor/termcolor.hpp"
 #include "handle_styles.hpp"
 
 namespace tuipp {
