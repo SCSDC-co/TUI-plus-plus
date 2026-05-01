@@ -46,7 +46,7 @@ Text::render(const int& width) const
 }
 
 int
-Text::get_length() const
+Text::get_length(const int& width) const
 {
     return this->content.length();
 }

@@ -29,7 +29,7 @@ class Panel : public IRenderable
     void add_element(IRenderable& item);
 
     virtual void render(const int& width) const override;
-    virtual int get_length() const override;
+    virtual int get_length(const int& width = 0) const override;
 
   private:
     std::string header{};

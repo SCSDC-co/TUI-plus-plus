@@ -19,7 +19,7 @@ class Rule : public tuipp::widgets::IRenderable
     styles::Justification justification{};
     styles::Foreground color{};
 
-    Rule(std::string content,
+    Rule(std::string content               = "",
          styles::border::BorderType border = styles::border::BorderType::SQUARE)
       : content(content)
       , fill_char(
@@ -28,6 +28,7 @@ class Rule : public tuipp::widgets::IRenderable
     }
 
     virtual void render(const int& width) const override;
+    virtual int get_length(const int& width = 0) const override;
 
   private:
     std::string content{};

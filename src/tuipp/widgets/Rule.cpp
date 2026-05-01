@@ -62,7 +62,14 @@ Rule::render(const int& width) const
         ++total_width;
     }
 
-    output << termcolor::reset << '\n';
+    output << termcolor::reset;
+}
+
+int
+Rule::get_length(const int& width) const
+{
+    // the rule doesn't have a length it self
+    return width;
 }
 
 } // namespace widgets

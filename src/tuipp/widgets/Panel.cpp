@@ -59,9 +59,9 @@ Panel::render(const int& width) const
                                                                styles::border::BorderParts::LEFT)
                   << termcolor::reset;
 
-        widget->render(width - actual_width);
+        widget->render(actual_width - 2);
 
-        for (int i = widget->get_length(); i < actual_width - 2; ++i) {
+        for (int i = widget->get_length(actual_width); i < actual_width - 2; ++i) {
             std::cout << ' ';
         }
 
@@ -94,7 +94,7 @@ Panel::add_element(IRenderable& item)
 }
 
 int
-Panel::get_length() const
+Panel::get_length(const int& width) const
 {
     int lenght{};
 
@@ -105,7 +105,7 @@ Panel::get_length() const
     int longest{ 0 };
 
     for (auto& widget : this->childrens) {
-        int widget_lenght = widget->get_length();
+        int widget_lenght = widget->get_length(width);
 
         if (widget_lenght > longest) {
             longest = widget_lenght;

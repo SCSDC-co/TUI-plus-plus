@@ -9,7 +9,9 @@ class IRenderable
 {
   public:
     virtual void render(const int& width) const = 0;
-    virtual int get_length() const              = 0;
+
+    // i know this may look silly, but it's for getting the right length for the rule widget
+    virtual int get_length(const int& width = 0) const = 0;
 
     virtual ~IRenderable() = default;
 };
