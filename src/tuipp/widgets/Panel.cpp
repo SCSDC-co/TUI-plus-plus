@@ -3,8 +3,8 @@
 #include <iostream>
 
 #include "tuipp/styles/Border.hpp"
+#include "tuipp/styles/Styles.hpp"
 #include "tuipp/widgets/IRenderable.hpp"
-#include "widgets/apply_styles.hpp"
 #include "widgets/markup_text/parser/get_text_length.hpp"
 #include "widgets/markup_text/parser/parse_string.hpp"
 
@@ -33,7 +33,7 @@ Panel::render(const int& width) const
 
     const int actual_width{ biggest_lenght + 2 };
 
-    apply_foreground(std::cout, this->border_color);
+    styles::Style::apply_foreground(std::cout, this->border_color);
 
     std::cout << styles::border::get_part_from_border_type(this->border,
                                                            styles::border::BorderParts::TOP_LEFT)
@@ -41,7 +41,7 @@ Panel::render(const int& width) const
 
     markup_text::parse_string(std::cout, this->header);
 
-    apply_foreground(std::cout, this->border_color);
+    styles::Style::apply_foreground(std::cout, this->border_color);
 
     for (int i = 0; i < actual_width - header_lenght - 2; ++i) {
         std::cout << styles::border::get_part_from_border_type(this->border,
@@ -53,7 +53,7 @@ Panel::render(const int& width) const
               << termcolor::reset << '\n';
 
     for (auto& widget : this->childrens) {
-        apply_foreground(std::cout, this->border_color);
+        styles::Style::apply_foreground(std::cout, this->border_color);
 
         std::cout << styles::border::get_part_from_border_type(this->border,
                                                                styles::border::BorderParts::LEFT)
@@ -65,14 +65,14 @@ Panel::render(const int& width) const
             std::cout << ' ';
         }
 
-        apply_foreground(std::cout, this->border_color);
+        styles::Style::apply_foreground(std::cout, this->border_color);
 
         std::cout << styles::border::get_part_from_border_type(this->border,
                                                                styles::border::BorderParts::RIGHT)
                   << termcolor::reset << '\n';
     }
 
-    apply_foreground(std::cout, this->border_color);
+    styles::Style::apply_foreground(std::cout, this->border_color);
 
     std::cout << styles::border::get_part_from_border_type(
       this->border, styles::border::BorderParts::BOTTOM_LEFT);

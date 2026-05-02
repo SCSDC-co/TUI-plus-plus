@@ -3,7 +3,6 @@
 #include <ostream>
 
 #include "../src/vendor/termcolor.hpp"
-#include "apply_styles.hpp"
 #include "markup_text/parser/get_text_length.hpp"
 #include "markup_text/parser/parse_string.hpp"
 
@@ -21,7 +20,7 @@ Rule::render(const int& width) const
     int padding_left{};
     int padding_right{};
 
-    switch (this->justification) {
+    switch (this->style.get_justification()) {
         case styles::Justification::LEFT:
             padding_left  = 0;
             padding_right = width - content_length;
@@ -38,7 +37,7 @@ Rule::render(const int& width) const
 
     int total_width{ 0 };
 
-    apply_foreground(output, this->color);
+    this->style.apply_foreground(output);
 
     for (int i = 0; i < padding_left; ++i) {
         output << this->fill_char;
@@ -52,7 +51,7 @@ Rule::render(const int& width) const
 
     output << termcolor::reset;
 
-    apply_foreground(output, this->color);
+    this->style.apply_foreground(output);
 
     total_width += content_length;
 

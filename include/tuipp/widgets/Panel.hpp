@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "tuipp/styles/Border.hpp"
-#include "tuipp/styles/Foreground.hpp"
+#include "tuipp/styles/Styles.hpp"
 #include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {

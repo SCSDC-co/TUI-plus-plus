@@ -1,12 +1,8 @@
 #pragma once
 
 #include <string>
-#include <vector>
 
-#include "tuipp/styles/Background.hpp"
-#include "tuipp/styles/Effects.hpp"
-#include "tuipp/styles/Foreground.hpp"
-#include "tuipp/styles/Justification.hpp"
+#include "tuipp/styles/Styles.hpp"
 #include "tuipp/widgets/IRenderable.hpp"
 
 namespace tuipp {
@@ -44,22 +40,15 @@ namespace widgets {
 class Text : public tuipp::widgets::IRenderable
 {
   public:
-    styles::Foreground foreground{};
-    styles::Background background{};
-    std::vector<styles::Effects> effects{};
-
-    styles::Justification justification{};
+    styles::Style style;
 
     Text(std::string content,
-         styles::Justification justification  = styles::Justification::LEFT,
-         styles::Foreground foreground        = styles::Foreground::NONE,
-         styles::Background background        = styles::Background::NONE,
-         std::vector<styles::Effects> effects = { styles::Effects::NONE })
+         styles::Style style = styles::Style(styles::Foreground::NONE,
+                                             styles::Background::NONE,
+                                             { styles::Effects::NONE },
+                                             styles::Justification::LEFT))
       : content(content)
-      , justification(justification)
-      , foreground(foreground)
-      , background(background)
-      , effects(effects)
+      , style(style)
     {
     }
 
